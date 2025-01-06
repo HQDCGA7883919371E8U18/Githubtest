@@ -1,0 +1,197 @@
+.motta-share-socials-title-below {
+	.motta-share-icons {
+		.social-share-link {
+			display: flex;
+			flex-direction: column;
+			background-color: transparent;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		.motta-svg-icon {
+			background-color: #1d2128;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 15px;
+			font-size: var(--share-icon-size,24px);
+			width: calc(var(--share-icon-size, 36px) + (2 * var(--share-icon-padding, .5em)));
+			height: calc(var(--share-icon-size, 36px) + (2 * var(--share-icon-padding, .5em)));
+		}
+
+		.mt-socials--twitter .motta-svg-icon {
+			background-color: #1da1f2;
+		}
+
+		.mt-socials--facebook .motta-svg-icon {
+			background-color: #3b5998;
+		}
+
+		.mt-socials--google-plus .motta-svg-icon {
+			background-color: #dd4f43;
+		}
+
+		.mt-socials--pinterest .motta-svg-icon{
+			background-color: #c8232c;
+		}
+
+		.mt-socials--tumblr .motta-svg-icon{
+			background-color: #34465d;
+		}
+
+		.mt-socials--reddit .motta-svg-icon{
+			background-color: #5f99cf;
+		}
+
+		.mt-socials--linkedin .motta-svg-icon{
+			background-color: #0077b5;
+		}
+
+		.mt-socials--stumbleupon .motta-svg-icon {
+			background-color: #eb4924;
+		}
+
+		.mt-socials--digg .motta-svg-icon {
+			background-color: #005be2;
+		}
+
+		.mt-socials--vk .motta-svg-icon {
+			background-color: #45668e;
+		}
+
+		.mt-socials--telegram .motta-svg-icon {
+			background-color: #0088cc;
+		}
+
+		.mt-socials--email .motta-svg-icon {
+			background-color: #b7b7b7;
+		}
+
+		.mt-socials--blogger .motta-svg-icon {
+			background-color: #fc4f08;
+		}
+
+		.mt-socials--tiktok .motta-svg-icon {
+			background-color: #ff0050;
+		}
+
+		.mt-socials--flickr .motta-svg-icon {
+			background-color: #0063dc;
+		}
+
+		.mt-socials--instagram .motta-svg-icon {
+			background-color: #3f729b;
+		}
+
+		.mt-socials--youtube .motta-svg-icon {
+			background-color: #FF0000;
+		}
+
+		.mt-socials--vimeo .motta-svg-icon {
+			background-color: #86c9ef;
+		}
+
+		.mt-socials--dribbble .motta-svg-icon {
+			background-color: #ea4c89;
+		}
+
+		.mt-socials--behance .motta-svg-icon {
+			background-color: #053eff;
+		}
+
+		.mt-socials--github .motta-svg-icon {
+			background-color: #4078c0;
+		}
+
+		.social-share__label {
+			color: #1d2128;
+		}
+	}
+
+	&.motta-share-socials-shape-rounded {
+		.motta-share-icons .motta-svg-icon {
+			border-radius: 10%;
+		}
+	}
+
+	&.motta-share-socials-shape-circle {
+		.motta-share-icons .motta-svg-icon {
+			border-radius: 50%;
+		}
+	}
+
+}
+
+.motta-share-socials-title-beside {
+	.motta-share-icons {
+		.motta-svg-icon  {
+			margin-right: 18px;
+			font-size: var(--share-icon-size,24px);
+		}
+
+	}
+
+	.social-share-link  {
+		padding: 18px 25px 18px 20px;
+	}
+
+	&.motta-share-socials-shape-rounded {
+		.motta-share-icons .social-share-link {
+			border-radius: 7px;
+		}
+	}
+
+	&.motta-share-socials-shape-circle {
+		.motta-share-icons  .social-share-link {
+			border-radius: 30px;
+		}
+	}
+}
+
+.motta-share-icons {
+	.social-share__label {
+		@include font-size(14/16);
+		font-weight: 500;
+	}
+}
+
+.elementor-grid-0 .elementor-grid.motta-share-icons .elementor-grid-item {
+	display: inline-flex;
+}
+
+.motta-share-icons__copylink {
+	border-top: 1px solid $color__border-main;
+	margin-top: 38px;
+	padding-top: 40px;
+
+	form {
+		position: relative;
+	}
+}
+
+.motta-share-icons__copylink-heading {
+	@include font-size(14/16);
+	font-weight: 500;
+	line-height: 1;
+	color: $color__gray;
+	margin-bottom: 16px;
+}
+
+.motta-share-icons__copylink--link {
+	width: 100%;
+	@include font-size(12/16);
+	font-weight: 500;
+	color: $color__gray;
+	padding-right: 95px;
+}
+
+.motta-share-icons__copylink--button {
+	position: absolute;
+	min-width: auto;
+	line-height: 44px;
+	top: 8px;
+	right: 8px;
+	box-shadow: none;
+}

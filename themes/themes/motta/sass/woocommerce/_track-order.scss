@@ -1,0 +1,36 @@
+.woocommerce-form-track-order{
+	width: 752px;
+	margin-right: auto;
+	margin-left: auto;
+
+	p {
+		text-align: center;
+		@include font-size(16/16);
+		font-weight: 400;
+		margin: 0;
+	}
+
+
+	.form-tracking-order-info{
+		padding: 60px 97px 35px;
+		border: 1px solid $color__border-main;
+		margin-top: 62px;
+	}
+
+	.form-row{
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		margin-bottom: 30px;
+
+		label{
+			margin-bottom: 8px;
+			@include font-size(14/16);
+			font-weight: 500;
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}

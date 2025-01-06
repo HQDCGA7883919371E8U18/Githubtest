@@ -1,0 +1,32 @@
+ul.products {
+	li.product {
+		.product-inner {
+			&:hover {
+				.motta-product-card-swiper-button {
+					opacity: 1;
+				}
+
+				.product-thumbnails--hover {
+					&:not(.hover-swatch) {
+						.hover-image {
+							opacity: 1;
+						}
+					}
+				}
+
+				.product-variation-items--hover {
+					.product-variation-items--text {
+						opacity: 0;
+						visibility: hidden;
+					}
+
+					.product-variation-items--item {
+						opacity: 1;
+						visibility: visible;
+						transform: translateY(0);
+					}
+				}
+			}
+		}
+	}
+}

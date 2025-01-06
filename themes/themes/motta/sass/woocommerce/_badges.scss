@@ -1,0 +1,144 @@
+.woocommerce-badges {
+	position: absolute;
+	top: 12px;
+	left: 15px;
+	z-index: 2;
+	display: flex;
+
+	.woocommerce-badge--text {
+		color: #ff311c;
+		@include font-size(11/16);
+		font-weight: 500;
+		line-height: 1;
+		margin-left: 12px;
+	}
+}
+
+.woocommerce-badge {
+	@include font-size(11/16);
+	font-weight: 500;
+	color: #fff;
+	line-height: 1;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ff311c;
+	border-radius: var(--mt-border__radius);
+	padding: 8px 11px 6px;
+	margin-right: 6px;
+
+	&.featured {
+		background-color: #ff7316;
+	}
+
+	&.new {
+		background-color: #3fb981;
+	}
+
+	&.sold-out {
+		background-color: rgba( 0, 0, 0, 0.12 );
+	}
+
+	&.custom {
+		--id--badge-custom-bg: #000;
+		--id--badge-custom-color: #fff;
+		background-color: var(--id--badge-custom-bg);
+		color: var(--id--badge-custom-color);
+	}
+
+	span {
+		display: inline;
+	}
+
+	.woocommerce-badge--label {
+		margin-right: 5px;
+	}
+
+	.motta-countdown {
+		margin: 0 -4px;
+		display: flex;
+		.timer {
+			display: flex;
+			align-items: center;
+			padding: 0 4px;
+			color: inherit;
+
+			.digits,
+			.text,
+			.divider {
+				font-size: inherit;
+				font-weight: inherit;
+				text-transform: inherit;
+				margin: 0;
+			}
+
+			.divider {
+				display: inline;
+				top: 0;
+				right: -3px;
+				  /*rtl:raw:
+					right: -3px;
+					left: auto;
+				*/
+			}
+		}
+	}
+}
+
+.motta-single-product-sale {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-repeat: no-repeat;
+	color: $color__light;
+	@include font-size(14/16);
+	font-weight: 500;
+	height: 32px;
+	border-radius: 2px;
+	padding: 0 20px;
+	margin-bottom: 10px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.motta-single-product-sale__countdown {
+	display: flex;
+	align-items: center;
+
+	.motta-countdown {
+		align-items: center;
+
+		span {
+			color: inherit;
+			@include font-size(14/16);
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			padding: 0;
+			line-height: 1;
+
+			&.digits {
+				margin: 0;
+			}
+
+			&.divider {
+				position: static;
+				margin-left: 3px;
+				@include font-size(12/16);
+			}
+
+			&.text {
+				text-transform: lowercase;
+			}
+
+			&.weeks {
+				display: none;
+			}
+
+		}
+
+		> span {
+			margin-left: 3px;
+		}
+	}
+}

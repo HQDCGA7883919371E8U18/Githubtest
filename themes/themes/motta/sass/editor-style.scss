@@ -1,0 +1,53 @@
+/*
+Theme Name: Motta
+Description: Used to style the TinyMCE editor.
+*/
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Body
+ * 2.0 - Typography
+ * 3.0 - Elements
+ * 4.0 - Alignment
+ * 5.0 - Galleries
+ */
+
+ // Import variables and mixins.
+@import "abstracts/variables/css";
+@import "abstracts/abstracts";
+
+/* Normalize
+--------------------------------------------- */
+@import "generic/normalize";
+
+/* Box sizing
+--------------------------------------------- */
+@import "generic/box-sizing";
+
+/* Typography
+--------------------------------------------- */
+@import "base/typography/headings";
+@import "base/typography/copy";
+
+/* Elements
+--------------------------------------------- */
+@import "base/elements/body";
+@import "base/elements/hr";
+@import "base/elements/lists";
+@import "base/elements/media";
+@import "base/elements/tables";
+
+/* Links
+--------------------------------------------- */
+@import "base/elements/links";
+
+/* Forms
+--------------------------------------------- */
+@import "base/elements/buttons";
+@import "base/elements/fields";
+
+/* Widgets
+--------------------------------------------- */
+@import "components/widgets/widgets";
+@import "woocommerce/widgets";

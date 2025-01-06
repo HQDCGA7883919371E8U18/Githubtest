@@ -1,0 +1,28 @@
+.motta-post-carousel--elementor {
+	.list-posts__inner {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	.motta-swiper-button {
+		@include font-size(16/16);
+		top: 50%;
+		transform: translateY( -50% );
+
+		/*rtl:raw:
+			transform: translateY(-50%) rotateY(180deg);
+		*/
+	}
+
+	.motta-swiper-button-prev {
+		left: -22px;
+	}
+
+	.motta-swiper-button-next {
+		right: -22px;
+	}
+
+	.swiper-pagination {
+		margin-top: 0;
+	}
+}

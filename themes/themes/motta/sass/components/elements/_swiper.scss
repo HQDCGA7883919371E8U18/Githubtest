@@ -1,0 +1,94 @@
+// Pagination
+.swiper-pagination-bullets {
+	position: relative;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+	background-color: #c9cacc;
+	width: 8px;
+	height: 8px;
+	opacity: 1;
+	margin: 0 6px;
+	border: none;
+
+	&.swiper-pagination-bullet-active,
+	&:hover {
+		background-color: $color__dark;
+	}
+}
+
+.swiper-pagination--background {
+	background-color: rgba( $color__dark, .48);
+	height: 32px;
+	display: flex;
+	align-items: center;
+	width: fit-content;
+	border-radius: 30px;
+	padding: 6px;
+
+	.swiper-pagination-bullet {
+		background-color: rgba( $color__light, .24 );
+
+		&.swiper-pagination-bullet-active,
+		&:hover {
+			background-color: $color__light;
+		}
+	}
+
+	&:empty {
+		display: none;
+	}
+}
+
+// Navigation
+.swiper-button {
+	display: inline-flex;
+	cursor: pointer;
+	@include font-size(14/16);
+	background-color: $color__light;
+	color: $color__gray;
+	width: 44px;
+	height: 44px;
+	border-radius: 100%;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 2px 6px 0px rgba( $color__dark, .16 );
+	transition: .3s;
+
+	&:hover {
+		box-shadow: 0px 4px 8px 0px rgba( $color__dark, .16 );
+		color: $color__dark;
+	}
+}
+
+.swiper-button-disabled {
+	cursor: not-allowed;
+
+	&:hover {
+		color: $color__gray;
+	}
+}
+
+.swiper-button--subtle {
+	background-color: transparent;
+	width: auto;
+	height: auto;
+	border-radius: 0;
+	box-shadow: none;
+
+	&:hover {
+		box-shadow: none;
+	}
+}
+
+.swiper-button--raised {
+	@include font-size(24/16);
+	width: 32px;
+	height: 60px;
+	border-radius: 2px;
+}
+
+.swiper-pagination-lock,
+.swiper-button-lock {
+	display: none;
+}

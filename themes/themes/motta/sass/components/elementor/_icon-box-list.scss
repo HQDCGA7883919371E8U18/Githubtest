@@ -1,0 +1,113 @@
+.motta-icon-box-list {
+    padding: 13px 19px 9px;
+    border: 1px solid #ecf0f4;
+    border-radius: 2px;
+}
+
+.motta-icon-box-list__item {
+    --motta-icon-box-list__item-spacing: 10px;
+    --motta-icon-box-list__button-spacing: 10px;
+    display: flex;
+    align-items: center;
+    color: #7c818b;
+    border-bottom: 1px solid #ecf0f4;
+    padding-bottom: var(--motta-icon-box-list__item-spacing);
+    margin-bottom: var(--motta-icon-box-list__item-spacing);
+
+	&:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+}
+
+.motta-icon-box-list__icon {
+    --motta-icon-box-list__icon-spacing: 16px;
+    @include font_size(14/16);
+    margin-right: var(--motta-icon-box-list__icon-spacing);
+    line-height: 1;
+}
+
+.motta-icon-box-list__title {
+    @include font_size(12/16);
+    color: #7c818b;
+    font-weight: 500;
+	margin: 0;
+    margin-right: var(--motta-icon-box-list__button-spacing);
+}
+
+.motta-icon-box-list__button {
+
+	@include font_size(12/16);
+    color: #7c818b;
+    margin-left: auto;
+    border-bottom: none;
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -4px;
+        width: 0;
+        border-bottom: 1px solid;
+        transition: width .3s;
+    }
+
+	&:hover {
+		color: #1d2128;
+
+        &:after {
+            width: 100%;
+            left: 0;
+        }
+	}
+}
+
+.motta-icon-list--vertical {
+    .motta-icon-box-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    .motta-icon-box-list__item {
+        --motta-icon-box-list__item-spacing: 30px;
+        flex-direction: column;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-right: var(--motta-icon-box-list__item-spacing);
+        border-bottom: none;
+        text-align: center;
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: calc(var(--motta-icon-box-list__item-spacing)/2*-1);
+            border-right: 1px solid transparent;
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    .motta-icon-box-list__icon {
+        margin-right: 0;
+        margin-bottom: var(--motta-icon-box-list__icon-spacing);
+    }
+
+    .motta-icon-box-list__button {
+        padding-left: 0;
+        padding-top: var(--motta-icon-box-list__button-spacing);
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,81 @@
+.motta-team-member-grid__tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 48px;
+}
+
+.motta-team-member-grid__tags-item {
+	@include font-size(18/16);
+	font-weight: 500;
+	line-height: 1;
+	color: $color__gray;
+	padding: 25px 55px 30px;
+	text-transform: capitalize;
+	border-bottom: 2px solid #ecf0f4;
+	cursor: pointer;
+
+	&.active {
+		color: $color__dark;
+		border-bottom-color: #1d2128;
+		text-shadow: 0.6px 0px #1d2128;
+	}
+}
+
+.motta-team-member-grid__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	margin: -10px -30px;
+	position: relative;
+
+	.motta-team-member-grid__item {
+		img {
+			border-radius: 100%;
+		}
+	}
+}
+
+.motta-team-member-grid__item {
+	margin-bottom: 18px;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+	padding: 10px 30px;
+	position: relative;
+
+	img {
+		margin-bottom: 25px;
+	}
+
+	&.fadeIn {
+		animation-name: fadeIn;
+	}
+
+	&.fadeOut {
+		display: none;
+	}
+}
+
+.motta-team-member-grid__title {
+	@include font-size(24/16);
+	font-weight: 500;
+	line-height: 32px;
+	margin-bottom: 2px;
+}
+
+.motta-team-member-grid__description {
+	@include font-size(18/16);
+	line-height: 32px;
+}
+
+.motta-team-member-grid__socials {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 13px -12px 0;
+
+	a {
+		padding: 0 12px 5px;
+	}
+}

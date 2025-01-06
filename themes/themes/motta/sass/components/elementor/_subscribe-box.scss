@@ -1,0 +1,102 @@
+.motta-subscribe-box-form-items--row {
+	.motta-subscribe-box {
+		.mc4wp-form-fields {
+			position: relative;
+			display: flex;
+
+			input[type="text"],
+			input[type="email"],
+			select {
+				min-width: 0;
+			}
+
+			input {
+				flex: 1;
+			}
+
+			button,
+			input[type="submit"] {
+				flex: 0;
+				margin-left: 12px;
+			}
+		}
+	}
+}
+
+.motta-subscribe-box-form-items--column {
+	.motta-subscribe-box {
+		text-align: center;
+	}
+
+	.mc4wp-form-fields {
+		display: flex;
+		flex-direction: column;
+
+		input[type="text"],
+		input[type="email"],
+		select {
+			height: 60px;
+		}
+
+		button,
+		input[type="submit"] {
+			line-height: 60px;
+			margin-top: 24px;
+			margin-left: 0;
+		}
+	}
+}
+
+
+.motta-subscribe-box {
+	display: flex;
+
+	&.show-image {
+		img {
+			flex: 1 0 50%;
+		}
+	}
+}
+
+.motta-subscribe-box__content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.mc4wp-form {
+		width: 100%;
+	}
+}
+
+.motta-subscribe-box__title {
+	@include font-size(36/16);
+	line-height: 40px;
+	font-weight: 700;
+}
+
+.motta-subscribe-box__description {
+	margin-bottom: 16px;
+	margin-top: 3px;
+}
+
+.motta-subscribe-box__short-description {
+	@include font-size(12/16);
+	color: $color__gray;
+	margin-top: 16px;
+
+	a {
+		--mt-color__primary: #1d2128;
+		color: $color__dark;
+		text-decoration: underline !important;
+	}
+}
+
+@media ( max-width: 767px ) {
+	.motta-subscribe-box {
+		&.show-image {
+			flex-wrap: wrap;
+		}
+	}
+}

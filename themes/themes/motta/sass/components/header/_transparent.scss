@@ -1,0 +1,34 @@
+.header-transparent {
+	.site-header__section {
+		--mt-header-bc: transparent;
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: 999;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+.header-transparent-text-light  {
+	.site-header__section:not(.minimized){
+		color: #fff;
+	}
+
+	.header-logo {
+		.logo-light + .logo-dark {
+			display: none;
+		}
+	}
+
+	.site-header__section.minimized{
+		.logo-dark {
+			display: block;
+		}
+
+		.logo-light {
+			display: none;
+		}
+	}
+
+}

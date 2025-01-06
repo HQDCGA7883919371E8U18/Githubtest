@@ -1,0 +1,19 @@
+.motta-image-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 -6px;
+}
+
+.motta-image-grid__item {
+	display: inline-flex;
+	flex-direction: column;
+	position: relative;
+	justify-content: space-between;
+	padding: 0 6px;
+	margin-bottom: 0;
+
+	a {
+		width: 100%;
+	}
+}

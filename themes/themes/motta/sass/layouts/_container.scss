@@ -1,0 +1,103 @@
+body {
+	overflow-x: hidden;
+}
+
+.site {
+	overflow: hidden;
+	min-height: 100vh;
+}
+
+.site-content {
+	padding-top: 63px;
+	padding-bottom: 63px;
+}
+
+body.page {
+	.site-content {
+		padding-top: 50px;
+		padding-bottom: 63px;
+	}
+}
+
+.site-content-no-top-spacing {
+	#site-content {
+		padding-top: 0;
+	}
+}
+
+.site-content-no-bottom-spacing {
+	#site-content {
+		padding-bottom: 0;
+	}
+}
+
+.motta-container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+
+	&:before {
+		@include clearfix();
+	}
+
+	&:after {
+		@include clearfix();
+		@include clearfix-after();
+	}
+}
+
+.motta-container-fluid {
+	margin-left: 25px;
+	margin-right: 25px;
+	padding-left: 16px;
+	padding-right: 16px;
+	width: auto;
+
+	&:before {
+		@include clearfix();
+	}
+
+	&:after {
+		@include clearfix();
+		@include clearfix-after();
+	}
+}
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.container-fluid {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.clearfix {
+	&::after {
+		@include clearfix();
+		@include clearfix-after();
+	}
+}
+
+@media (min-width:1200px) {
+	.container {
+		width: 1172px
+	}
+}
+
+.product-archive-elementor,
+.single-product-elementor {
+	.site-content {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.site-breadcrumb {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}

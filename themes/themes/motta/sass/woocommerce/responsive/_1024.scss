@@ -1,0 +1,60 @@
+@media (max-width: 1024px) {
+	.single-product div.product {
+		&.layout-5 {
+			.product-gallery-summary {
+				flex-wrap: wrap;
+			}
+
+			.motta-product-gallery {
+				width: 50%;
+			}
+
+			.product-summary-wrapper {
+				width: 50%	;
+			}
+
+			.entry-summary {
+				width: 100%;
+				padding: 0;
+				margin-top: 32px;
+			}
+
+			&.product-type-grouped {
+				.woocommerce-grouped-product-list-item__quantity {
+					.quantity {
+						input {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+
+		.motta-single-product-sale__countdown {
+			.motta-single-product-sale__text {
+				display: none;
+			}
+		}
+
+		.woocommerce-product-gallery__thumbs-carousel .motta-swiper-button {
+			padding-left: 4px;
+			padding-right: 4px;
+		}
+	}
+
+	.woocommerce-wishlist {
+		ul.products {
+			li.product {
+				margin-right: 2.1%;
+				width: 23.42%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.motta-products-filter__header,
+	.motta-products-filter .panel__button-close {
+		display: none;
+	}
+}

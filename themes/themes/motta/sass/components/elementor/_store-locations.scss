@@ -1,0 +1,112 @@
+.motta-store-locations__tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 48px;
+}
+
+.motta-store-locations__tags-item {
+	@include font-size(18/16);
+	font-weight: 500;
+	line-height: 1;
+	color: $color__gray;
+	padding: 25px 55px 30px;
+	text-transform: capitalize;
+	border-bottom: 2px solid #ecf0f4;
+	cursor: pointer;
+
+	&.active {
+		color: $color__dark;
+		border-bottom-color: #1d2128;
+		text-shadow: 0.6px 0px #1d2128;
+	}
+}
+
+.motta-store-locations__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -23px;
+	position: relative;
+}
+
+.motta-store-locations__item {
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+	padding: 23px;
+	@include font-size(14/16);
+	position: relative;
+
+	&.fadeIn {
+		animation-name: fadeIn;
+	}
+
+	&.fadeOut {
+		display: none;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 23px;
+		bottom: 23px;
+		left: 23px;
+		right: 23px;
+		width: calc( 100% - ( 23px * 2 ) );
+		height: calc( 100% - ( 23px * 2 ) );
+		box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+		z-index: -1;
+	}
+}
+
+.motta-store-locations__content {
+	padding: 23px 46px 46px;
+}
+
+.motta-store-locations__location {
+	@include font-size(28/16);
+	font-weight: 700;
+	line-height: 32px;
+	margin-bottom: 13px;
+}
+
+.motta-store-locations__address {
+	margin-bottom: 11px;
+
+	b,
+	strong {
+		font-weight: 500;
+	}
+}
+
+.motta-store-locations__phone {
+	margin-bottom: 22px;
+}
+
+.motta-store-locations__hours-text {
+	@include font-size(11/16);
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.motta-store-locations__store-hours--item {
+	display: flex;
+	margin-bottom: 3px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.motta-store-locations__store-hours--day {
+	min-width: 105px;
+}
+
+.motta-store-locations__button {
+	background-color: $color__dark;
+	margin-top: 26px;
+
+	&:hover {
+		background-color: $color__dark;
+	}
+}

@@ -1,0 +1,53 @@
+.motta-countdown{
+    display: flex;
+    /*rtl:raw:
+        direction: ltr;
+    */
+
+    .timer{
+        padding: 0 23px;
+        position: relative;
+        color: $color__dark;
+        text-align: center;
+
+        .text{
+            display: block;
+            text-transform: uppercase;
+            @include font-size(14/16);
+            font-weight: 500;
+        }
+
+        .divider{
+            position: absolute;
+            top: 15px;
+            right: -8px;
+            @include font-size(44/16);
+            line-height: 1;
+            font-weight: 600;
+
+             /*rtl:raw:
+                right: -8px;
+                left: auto;
+            */
+        }
+    }
+
+    .digits{
+        @include font-size(52/16);
+        font-weight: 600;
+        display: block;
+        min-width: 15px;
+		margin-bottom: 7px;
+    }
+
+    .days,
+    .weeks {
+        .digits{
+            min-width: auto;
+        }
+    }
+
+	.divider{
+		display: none;
+	}
+}

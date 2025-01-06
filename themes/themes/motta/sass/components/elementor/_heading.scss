@@ -1,0 +1,32 @@
+.motta-heading{
+	padding-bottom: 0;
+	margin: 0;
+	color: var( --mt-color__heading );
+}
+
+.motta-heading--normal {
+	@include font-size(16/16);
+	font-weight: 500;
+}
+
+.motta-heading--medium {
+	@include font-size(18/16);
+	font-weight: 500;
+}
+
+.motta-heading--large {
+	@include font-size(28/16);
+	font-weight: 500;
+}
+
+.motta-before-heading {
+	@include font-size(18/16);
+	font-weight: 500;
+	line-height: 1;
+}
+
+.motta-heading__button-on{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

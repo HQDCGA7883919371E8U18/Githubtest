@@ -1,0 +1,74 @@
+.header-wishlist,
+.header-compare {
+	height: 100%;
+	display: flex;
+	align-items: center;
+
+	.motta-button__icon {
+		position: relative;
+	}
+
+	.motta-button--subtle,
+	.motta-button--text {
+		line-height: var(--mt-size__medium);
+		position: relative;
+	}
+
+	.motta-button--icon.motta-button--subtle {
+		min-width: auto;
+		padding: 0;
+	}
+
+	.motta-button--subtle {
+		position: relative;
+		min-width: auto;
+		padding: 0;
+	}
+
+	.motta-button--base {
+		--mt-color__primary--light: #fff;
+		--mt-color__primary: #ff5951;
+		--mt-color__primary--dark: hsl(3, 97%,57%);
+		--mt-color__primary--darker: hsl(3, 91%,48%);
+		padding: 0 14px;
+		text-align: left;
+
+		.header-counter {
+			color: var(--mt-color__primary);
+			background-color: var(--mt-color__primary--light);
+		}
+	}
+
+	.motta-button--base,
+	.motta-button--raised,
+	.motta-button--smooth,
+	.motta-button--ghost {
+		&:not(.motta-button--icon-top) {
+			.header-counter {
+				position: static;
+			}
+
+			.motta-button__text {
+				&:not(.screen-reader-text) {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		&.motta-button--icon-top {
+			.header-counter {
+				display: none;
+			}
+		}
+	}
+
+	.motta-button--icon-top {
+		.header-counter {
+			top: -6px;
+			left: calc(50% + 8px);
+			border: 1px solid $color__light;
+			height: 22px;
+			transform: translateX(-50%);
+		}
+	}
+}

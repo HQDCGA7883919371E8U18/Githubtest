@@ -1,0 +1,371 @@
+.motta-product-deals {
+	position: relative;
+
+	.swiper-pagination {
+		position: relative;
+		z-index: 0;
+		margin-top: 5px;
+	}
+
+	.motta-swiper-button {
+		top: 50%;
+		transform: translateY(-50%);
+
+		/*rtl:raw:
+			transform: translateY(-50%) rotateY(180deg);
+		*/
+	}
+
+	.motta-swiper-button-prev {
+		left: -22px;
+	}
+
+	.motta-swiper-button-next {
+		right: -22px;
+	}
+
+	.swiper-scrollbar {
+		left: 0;
+		width: 100%;
+		position: relative;
+		z-index: 0;
+		margin-top: 17px;
+		margin-bottom: 0;
+		height: 2px;
+		background-color: $color__light-gray;
+		border-radius: 0;
+		pointer-events: auto;
+
+		.swiper-scrollbar-drag {
+			top: 0;
+			height: 2px;
+			background-color: $color__dark;
+			border-radius: 0;
+		}
+	}
+
+	.product-inner {
+		width: 100%;
+		pointer-events: auto;
+	}
+
+	.motta-swiper-carousel__paginations {
+		text-align: center;
+		pointer-events: auto;
+	}
+
+	.deal-sold {
+		margin-top: 10px;
+	}
+
+	ul.products {
+		&.product-card-layout-3 {
+			li.product {
+				.product-price-group {
+					.deal-sold {
+						margin-top: 10px;
+						transition: .3s;
+					}
+				}
+			}
+		}
+
+		&.product-card-layout-1 {
+			.deal-sold {
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+		}
+
+		&.product-card-layout-2 {
+			.deal-sold {
+				padding-left: 9px;
+				padding-right: 9px;
+			}
+		}
+
+		&.product-card-layout-4 {
+			.deal-sold {
+				padding-left: 12px;
+				padding-right: 12px;
+			}
+		}
+	}
+
+	.deal-progress {
+		.progress-bar {
+			height: 4px;
+			border-radius: 2px;
+			position: relative;
+			background: #e4e4e4;
+			margin-bottom: 5px;
+		}
+
+		.progress-value {
+			height: 4px;
+			background-color: #1d2128;
+			border-radius: 2px;
+		}
+
+		.deal-text {
+			@include font-size(11/16);
+			font-weight: 500;
+			color: $color__gray;
+		}
+	}
+}
+
+.motta-product-deals__products {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	pointer-events: none;
+	margin: -10px -10px -150px;
+	padding: 10px 10px 150px;
+
+	&:hover {
+		z-index: 3;
+	}
+}
+
+.motta-product-deals__title {
+	@include font-size(28/16);
+	font-weight: 500;
+	line-height: 24px;
+	color: var( --mt-color__heading );
+}
+
+.motta-product-deals__aftertitle {
+	@include font-size(14/16);
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.motta-product-deals__group-heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.motta-product-deals__countdown {
+	@include font-size(14/16);
+	color: #7c818b;
+
+	.motta-countdown {
+		.timer,
+		.digits {
+			@include font-size(14/16);
+		}
+
+		.divider {
+			display: block;
+			@include font-size(16/16);
+			color: #7c818b;
+			top: 7px;
+			right: -2px;
+			  /*rtl:raw:
+                right: -2px;
+				left: auto;
+            */
+		}
+
+		.text {
+			@include font-size(11/16);
+			font-weight: 400;
+			text-transform: capitalize;
+			color: #7c818b;
+		}
+
+		.timer {
+			padding: 0 10px;
+			color: #1d2128;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+
+		.digits {
+			background-color: #1d2128;
+			color: #fff;
+			border-radius: 50%;
+			line-height: 32px;
+			height: 32px;
+			width: 32px;
+			font-weight: 500;
+			@include font-size(12/16);
+		}
+	}
+}
+
+.motta-product-deals-position--top {
+	.motta-product-deals__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 24px;
+	}
+
+	.motta-product-deals__sale-text {
+		@include font-size(14/16);
+		color: #7c818b;
+		font-weight: 500;
+	}
+
+	.motta-product-deals__countdown {
+		padding: 0 12px;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		.text {
+			display: none;
+		}
+
+		.digits {
+			margin-bottom: 0px;
+		}
+	}
+
+	.motta-product-deals__button {
+		display: flex;
+		position: relative;
+		padding-left: 24px;
+		white-space: nowrap;
+
+		.motta-button {
+			color: #1d2128;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0px;
+			width: 1px;
+			height: 24px;
+			background-color: #ecf0f4;
+		}
+	}
+}
+
+.motta-product-deals-position--left {
+	.motta-product-deals {
+		display: flex;
+		align-items: flex-start;
+
+		ul.products {
+			li.product {
+				.product-inner {
+					padding-bottom: 0;
+				}
+
+				.product-variation-items {
+					margin-top: 0;
+				}
+
+				.woocommerce-loop-product__title {
+					margin-top: 0;
+				}
+
+				.motta-rating {
+					margin-top: 0;
+				}
+			}
+
+		}
+
+	}
+
+	.motta-product-deals__content {
+		display: block;
+		border: 2px solid $color__light-gray;
+		width: 218px;
+		padding: 25px 28px 30px;
+		text-align: center;
+		border-radius: var(--mt-border__radius);
+		margin-right: 11px;
+		border-radius: 8px;
+	}
+
+	.motta-product-deals__products {
+		width: calc( 100% - 229px );
+	}
+
+	.motta-product-deals__title {
+		@include font-size(18/16);
+	}
+
+	.motta-product-deals__aftertitle {
+		margin-top: 2px;
+		color: #ff9e20;
+	}
+
+	.motta-product-deals__group-heading {
+		flex-direction: column;
+	}
+
+	.motta-product-deals__countdown {
+		@include font-size(14/16);
+		margin-top: 38px;
+		color: #7c818b;
+		margin-bottom: 37px;
+
+		.motta-countdown {
+			margin-top: 11px;
+
+			.divider {
+				display: block;
+				color: #7c818b;
+				top: 10px;
+			}
+
+			.timer {
+				padding: 0 10px;
+				color: #1d2128;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				flex-direction: column;
+			}
+
+			.digits {
+				background-color: #0b5052;
+				color: #fff;
+				line-height: 40px;
+				width: 40px;
+				height: 40px;
+				margin-bottom: 2px;
+			}
+
+			.text {
+				margin-top: 5px;
+			}
+		}
+	}
+
+	.motta-swiper-button-prev {
+		left: 220px;
+	}
+
+	.motta-product-deals > .swiper-button-disabled {
+		display: none;
+	}
+
+}
+
+.motta-product-deals__button-mobile-on {
+	.motta-product-deals__button-mobile {
+		display: none;
+	}
+}
+
+.motta-product-deals__hide-progress-bar-yes {
+	.deal-sold {
+		display: none;
+	}
+}

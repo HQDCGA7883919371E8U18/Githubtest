@@ -1,0 +1,42 @@
+.motta-navigation-bar {
+	display: flex;
+	flex-direction: column;
+}
+
+.motta-navigation-bar__title {
+	@include font-size(16/16);
+	line-height: 60px;
+	font-weight: 500;
+	padding: 0 24px;
+	color: #7c818b;
+
+	a {
+		color: #7c818b;
+	}
+
+	&.active {
+		position: relative;
+		color: #1d2128;
+
+		a {
+			color: #1d2128;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 2px;
+			height: 24px;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			background-color: #1d2128;
+		}
+	}
+}
+
+.sticky-navigation-bar {
+	position: fixed;
+    top: 32px;
+	transition: 0.3s;
+}

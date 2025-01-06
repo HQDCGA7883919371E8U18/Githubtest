@@ -1,0 +1,48 @@
+.motta-image-box-carousel {
+	.motta-image-box-carousel__inner {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	.motta-swiper-button {
+		@include font-size(16/16);
+		top: 75px;
+	}
+
+	.motta-swiper-button-prev {
+		left: -22px;
+	}
+
+	.motta-swiper-button-next {
+		right: -22px;
+	}
+}
+
+.motta-image-box-carousel__item {
+	display: inline-flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+
+	a {
+		width: 100%;
+		display: contents;
+	}
+}
+
+.motta-image-box-carousel__title {
+	@include font-size(18/16);
+	font-weight: 700;
+	display: block;
+	margin-top: 4px;
+}
+
+.motta--title-ellipsis-yes {
+	.motta-image-box-carousel__title {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		width: 100%;
+	}
+}

@@ -1,0 +1,76 @@
+.motta-alert {
+	display: flex;
+    flex-direction: column;
+	@include font-size(14/16);
+	border-radius: 3px;
+	padding: 12px 3px;
+	position: relative;
+
+	a {
+		color: inherit;
+		text-decoration: underline !important;
+	}
+
+	&.motta-alert-icon {
+		padding-left: 42px;
+	}
+}
+
+.motta-alert__title {
+	font-weight: 500;
+	padding: 0 30px 0 15px;
+}
+
+.motta-alert__description {
+	padding: 0 30px 0 15px;
+}
+
+.motta-alert__icons {
+	@include font-size(24/16);
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var( --motta-alert__color );
+}
+
+.motta-alert__dismiss {
+	@include font-size(20/16);
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var( --motta-alert__color );
+
+	&:after {
+		display: none;
+	}
+}
+
+.motta-alert--success {
+	--motta-alert__color: #13bc96;
+
+	background-color: rgba( 19, 188, 150, .08 );
+	color: var( --motta-alert__color );
+}
+
+.motta-alert--danger {
+	--motta-alert__color: #f21951;
+
+	background-color: rgba( 242, 24, 80, .08 );
+	color: var( --motta-alert__color );
+}
+
+.motta-alert--warning {
+	--motta-alert__color: #e4a705;
+
+	background-color: rgba( 237, 178, 0, .08 );
+	color: var( --motta-alert__color );
+}
+
+.motta-alert--info {
+	--motta-alert__color: #1086ff;
+
+	background-color: rgba( 16, 134, 255, .08 );
+	color: var( --motta-alert__color );
+}

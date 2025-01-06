@@ -1,0 +1,158 @@
+/*
+Theme Name: _s
+
+WooCommerce styles override
+*/
+
+// WooCommerce color variables
+$woocommerce__color-error: #feedf1;
+$woocommerce__color-success: #ecfaf7;
+$woocommerce__color-info: #ecf6ff;
+
+// Import variables and mixins
+@import "abstracts/abstracts";
+
+/**
+ * Shop tables
+ */
+@import "woocommerce/tables";
+
+/**
+ * Page Header
+ */
+@import "woocommerce/page-header";
+
+/**
+ * Shop Header
+ */
+ @import "woocommerce/shop-header";
+
+/**
+ * Top Categories
+ */
+ @import "woocommerce/top-categories";
+
+/**
+ * Catalog Toolbar
+ */
+@import "woocommerce/toolbar";
+
+/**
+ * Catalog
+ */
+ @import "woocommerce/catalog";
+
+
+/**
+ * Products Card
+ */
+ @import "woocommerce/product-card";
+ @import "woocommerce/product-card-hover";
+
+ /**
+ * Badges
+ */
+ @import "woocommerce/badges";
+
+/**
+ * Social
+ */
+ @import "woocommerce/social";
+
+ /**
+ * BreadCrumb
+ */
+ @import "woocommerce/breadcrumb";
+
+/**
+ * Single product
+ */
+@import "woocommerce/single-product";
+@import "woocommerce/single-product-layout";
+
+@import 'woocommerce/quickview';
+
+/**
+ * Tabs
+ */
+@import "woocommerce/tabs";
+
+/**
+ * 360
+ */
+@import "woocommerce/360";
+
+/**
+ * Review
+ */
+@import "woocommerce/review";
+
+/**
+ * Sticky add to cart
+ */
+ @import "woocommerce/side";
+
+/**
+ * Checkout
+ */
+@import "woocommerce/checkout";
+
+/**
+ * Cart
+ */
+@import "woocommerce/cart";
+
+/**
+ * Cart
+ */
+@import "woocommerce/track-order";
+
+/**
+ * Pagination
+ */
+ @import "woocommerce/pagination";
+
+/**
+ * General WooCommerce components
+ */
+@import "woocommerce/components";
+
+/**
+ * WooCommerce widgets
+ */
+@import "woocommerce/widgets";
+
+/**
+ * Account Page
+ */
+ @import "woocommerce/account";
+
+/**
+ * Wishlist Page
+ */
+ @import "woocommerce/wishlist";
+
+/**
+ * Comapre Page
+ */
+ @import "woocommerce/compare";
+
+ /**
+ * Mobile Order By
+ */
+ @import 'woocommerce/mobile-orderby';
+
+ /**
+ * All Categories Page [product_categories]
+ */
+ @import 'woocommerce/categories-shortcode';
+
+  /**
+ * WP Blocks
+ */
+ @import 'woocommerce/blocks';
+
+/**
+ * Responsive
+ */
+ @import "woocommerce/responsive/responsive";

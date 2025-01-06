@@ -1,0 +1,96 @@
+.motta-accordion__title {
+	@include font-size(28/16);
+	font-weight: 500;
+	margin: 0;
+	position: relative;
+
+	a {
+		color: inherit;
+		display: block;
+		padding: 28px 50px 27px 0;
+	}
+}
+
+.motta-accordion__item {
+	border-bottom: 1px solid #ecf0f4;
+}
+
+.motta-accordion__content {
+	padding-bottom: 32px;
+	display: none;
+}
+
+.motta-accordion__icon {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	background-color: #ecf0f4;
+	border-radius: 50%;
+	color: #7c818b;
+	display: inline-flex;
+
+	i, svg {
+		transition: .3s;
+	}
+}
+
+.motta-accordion__icon--default {
+	width: 32px;
+	height: 32px;
+	transition: 0.4s;
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		border-style: solid;
+	}
+
+	&:before {
+		transform: translate(150%, -50%);
+		left: 0;
+		top: 50%;
+		border-width: 2px 0 0 0;
+		width: 25%;
+	}
+
+	&:after {
+		transform: translate(-50%, 150%);
+		left: 50%;
+		top: 0;
+		border-width: 0 0 0 2px;
+		height: 25%;
+	}
+}
+
+.motta-tab--active {
+	.motta-accordion__icon--default {
+		color: #ffffff;
+		background-color: #1d2128;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.motta-accordion__svg-icon {
+		i, svg {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.motta-accordion__icon-position--left {
+	.motta-accordion__icon {
+		left: 0;
+		right: auto;
+	}
+
+	.motta-accordion__title-text {
+		padding-left: 50px;
+		padding-right: 0;
+	}
+}

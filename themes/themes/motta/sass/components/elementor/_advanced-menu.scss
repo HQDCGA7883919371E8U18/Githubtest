@@ -1,0 +1,229 @@
+.motta-advanced-menu {
+	position: relative;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+	}
+
+	ul.menu {
+		> li {
+			> a {
+				position: relative;
+				z-index: 10;
+				margin: 0 16px;
+				line-height: 31.5px;
+				padding: 5px 14px 7px 15px;
+
+				> .menu-item-icon {
+					@include font-size(28/16);
+					color: $color__gray;
+					margin-right: 20px;
+					position: relative;
+					top: 6px;
+					transition: .2s;
+				}
+
+				&::after {
+					transition: .2s;
+					position: absolute;
+					right: 15px;
+					top: 52%;
+					transform: translateY(-50%);
+					display: inline-block;
+					content: '';
+					width: 7px;
+					height: 10px;
+					background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAYAAAB4zEQNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDQ4OCwgMjAyMC8wNy8xMC0yMjowNjo1MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIyLjAgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhERTI3NDlEMEQ1QjExRUQ4OEIyQTJDQjZFNkY4OTE2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhERTI3NDlFMEQ1QjExRUQ4OEIyQTJDQjZFNkY4OTE2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OERFMjc0OUIwRDVCMTFFRDg4QjJBMkNCNkU2Rjg5MTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OERFMjc0OUMwRDVCMTFFRDg4QjJBMkNCNkU2Rjg5MTYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5k5ytBAAAAWUlEQVR42mK8df8xAxCUAPEKIH7CgASYoBLdQHwAiGXQJUE67gKxMroCJqhRDtgUMEEVYVXAxIAHwCRloKqVobpBpjxhwiUB0xmBTQIEWIC4B8rGCASAAAMAxscZpdb3Q6kAAAAASUVORK5CYII=);
+
+					/*rtl:raw:
+						transform: translateY(-50%) rotateY(180deg);
+					*/
+				}
+			}
+
+			&:hover {
+				> a {
+					&::before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: -7px;
+						bottom: 0;
+						background-color: $color__background-gray;
+						border-radius: 24px;
+						z-index: -1;
+					}
+
+					&::after {
+						background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAYAAAB4zEQNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDQ4OCwgMjAyMC8wNy8xMC0yMjowNjo1MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIyLjAgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjg2REY5MjIxMEQ1QjExRUQ5OTYyRjkwMTAyOEM1QkI4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjg2REY5MjIyMEQ1QjExRUQ5OTYyRjkwMTAyOEM1QkI4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODZERjkyMUYwRDVCMTFFRDk5NjJGOTAxMDI4QzVCQjgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODZERjkyMjAwRDVCMTFFRDk5NjJGOTAxMDI4QzVCQjgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5loBQxAAAAWElEQVR42mKUVdRgAIISIF4BxE8YkAATVKIbiA8AsQy6JEjHXSBWRlfABDXKAZsCJqgirAqYGPAAmKQMVLUyVDfIlCdMuCRgOiOwSYAACxD3QNkYgQAQYABJ5xdvIEdRbwAAAABJRU5ErkJggg==);
+					}
+				}
+			}
+		}
+
+		ul {
+			li {
+				&:not( .mega-menu-container ) {
+					padding: 3px 0;
+
+					&:first-child {
+						padding-top: 0;
+					}
+
+					&:last-child {
+						padding-bottom: 0;
+					}
+				}
+
+				a {
+					line-height: 2;
+					display: inline-block;
+					position: relative;
+
+					&:after {
+						content: "";
+						position: absolute;
+						right: 0;
+						bottom: 2px;
+						width: 0;
+						border-bottom: 1px solid;
+						transition: width 0.3s;
+					}
+
+					&:hover {
+						&:after {
+							width: 100%;
+							left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	a {
+		@include font-size(14/16);
+		display: block;
+		text-decoration: none;
+	}
+
+	> ul {
+		flex-direction: column;
+		padding: 22px 0 24px;
+
+		> li {
+			&:first-child {
+				padding-top: 0;
+			}
+
+			&:hover {
+				> a {
+					color: $color__dark;
+
+					.motta-svg-icon {
+						color: inherit;
+					}
+				}
+			}
+
+			> a {
+				font-weight: 500;
+				position: relative;
+				line-height: ( 40/16 );
+			}
+		}
+	}
+
+	.menu-item-mega {
+		&:hover {
+			> ul {
+				.mega-menu-container {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	.mega-menu-main {
+		display: flex;
+
+		li {
+			padding: 3px 0;
+		}
+
+		> li {
+			padding: 0 24px;
+
+			> a ,
+			> span {
+				@include font-size(16/16);
+				font-weight: 500;
+				margin-bottom: 12px;
+			}
+
+			> span {
+				display: inline-block;
+			}
+		}
+
+		.font-weight--medium {
+			> a {
+				font-weight: 500;
+			}
+		}
+
+		.font-weight--large {
+			> a {
+				font-weight: 700;
+			}
+		}
+	}
+
+	.mega-menu-container {
+		padding: 35px 40px;
+	}
+
+	.mega-menu {
+		.mega-menu-container {
+			min-height: 100%;
+			box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+			border-radius: 16px;
+			position: absolute;
+			top: 0;
+			padding-left: calc( 100% + 34px );
+			opacity: 0;
+			visibility: hidden;
+			z-index: 99999;
+			transition: .3s;
+			overflow: hidden;
+			z-index: 9;
+			background-color: $color__background-body;
+		}
+
+		&.mega-menu--grid {
+			.mega-menu__row {
+				display: flex;
+			}
+		}
+	}
+
+	.menu-widget-image__content {
+		margin-top: 13px;
+	}
+
+	.menu-widget-image__desc {
+		@include font-size(14/16);
+	}
+}
+
+@media (min-width: 1200px) {
+	.motta-advanced-menu {
+		.mega-menu-container.container {
+			width: 1140px;
+		}
+	}
+}

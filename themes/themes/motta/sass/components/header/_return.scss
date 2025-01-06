@@ -1,0 +1,28 @@
+.header-return-button {
+	@include font-size(12/16);
+	font-weight: 500;
+
+	a {
+		--mt-color__primary--box-shadow: transparent;
+	}
+
+	.motta-svg-icon {
+		margin-right: 5px;
+
+		/*rtl:raw:
+			transform: rotateY(180deg);
+		*/
+	}
+}
+
+.motta-return-button--default a {
+	color: inherit;
+}
+
+.motta-return-button--base {
+	--mt-size__header-item : 44px;
+	--mt-color__primary: #1d2128;
+	--mt-color__primary--dark: #1d2128;
+	--mt-color__primary--darker: #1d2128;
+	--mt-color__primary--light: #fff;
+}

@@ -1,0 +1,9 @@
+.header-custom-text {
+	@include font-size(16/16);
+	font-weight: 500;
+	white-space: nowrap;
+
+	a {
+		color: inherit;
+	}
+}

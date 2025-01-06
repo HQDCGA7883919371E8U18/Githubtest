@@ -1,0 +1,22 @@
+ul.products {
+	li.product.product-category {
+		padding: 0 12px;
+		margin-bottom: 25px;
+		text-align: center;
+
+		.woocommerce-loop-category__title {
+			@include font-size(16/16);
+
+			.count {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+.motta-products-shortcode-page {
+	.woocommerce-result-count,
+	.woocommerce-ordering {
+		display: none;
+	}
+}

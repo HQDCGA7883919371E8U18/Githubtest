@@ -1,0 +1,112 @@
+.motta-image-hotspot {
+    position: relative;
+    overflow: hidden;
+
+    .motta-hotspot__point {
+        --rz-point-color-primary: #fff;
+        --rz-point-color-secondary: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 32px;
+            background-color: var(--rz-point-color-secondary);
+            opacity: .15;
+            border-radius: 50%;
+            position: absolute;
+            left: calc(-50% - 4px);
+            top: calc(-50% - 4px);
+            animation: anim-ripple 1.5s linear 0s infinite;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-color: var(--rz-point-color-primary);
+            border-radius: 50%;
+        }
+    }
+
+    .motta-hotspot__product {
+        display: inline-flex;
+        align-items: center;
+        padding: 20px;
+        background-color: #ffffff;
+        position: absolute;
+        width: 290px;
+        left: 50%;
+        top: 50%;
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+
+        .motta-hotspot__product-image {
+            margin-right: 15px;
+
+            img{
+                display: block;
+                max-width: 88px;
+            }
+        }
+
+        .motta-hotspot__product-name {
+            @include font-size(14/16);
+            font-weight: 500;
+            margin: 0 0 5px;
+        }
+
+        .star-rating {
+            margin-bottom: 5px;
+        }
+
+        .motta-hotspot__product-price {
+            @include font-size(14/16);
+            font-weight: 600;
+            color: #1d2128;
+            display: flex;
+            align-items: center;
+
+            ins {
+                background-color: transparent;
+                order: 1;
+            }
+
+            del {
+                color: $color__gray;
+                @include font-size(12/16);
+                order: 2;
+                padding-left: 5px;
+            }
+        }
+
+        .motta-hotspot__product-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .motta-hotspot-item.active {
+        .motta-hotspot__product {
+            opacity: 1;
+            z-index: 1;
+            pointer-events: all;
+        }
+    }
+}
+
+.motta-image-hotspot__featured-image {
+    /*rtl:raw:
+        transform: rotateY(180deg);
+    */
+}

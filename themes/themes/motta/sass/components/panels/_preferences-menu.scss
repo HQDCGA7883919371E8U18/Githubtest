@@ -1,0 +1,152 @@
+.preferences-menu {
+	padding: 0 32px;
+
+	.preferences-menu__heading {
+		@include font-size(14/16);
+		font-weight: 500;
+		color: $color__dark;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	li {
+		padding: 7px 0;
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			opacity: 1;
+
+			span {
+				color: $color__dark;
+
+				&::after {
+					display: none
+				}
+			}
+
+			.motta-button__icon {
+				@include font-size(14/16);
+
+				+ .motta-button__text {
+					padding-left: 22px;
+					@include font-size(14/16);
+					font-weight: 400;
+				}
+			}
+
+			> .motta-svg-icon {
+				@include font-size(12/16);
+				color: $color__gray;
+
+				&.motta-svg-icon--right {
+					/*rtl:raw:
+						transform: rotateY(180deg);
+					*/
+				}
+			}
+		}
+
+		&.preferences-menu__item {
+			> a {
+				padding: 7px 0 5px;
+				width: 100%;
+				line-height: 2;
+			}
+		}
+
+		&.motta-open {
+			.preferences-menu__item-child {
+				transform: none;
+				opacity: 1;
+				visibility: visible;
+				pointer-events: inherit;
+			}
+		}
+	}
+
+	.preferences-menu__item-child {
+		position: absolute;
+		left: 0;
+		top: 160px;
+		transform: translateX(100%);
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		width: 320px;
+		height: calc( 100% - 160px);
+		background-color: #fff;
+		overflow-y: auto;
+		padding: 18px 0;
+		transition: .5s;
+		z-index: 100;
+
+		li {
+			a {
+				display: inline-flex;
+				justify-content: space-between;
+				align-items: center;
+				@include font-size(14/16);
+				padding: 2px 32px;
+				margin: 0;
+				line-height: 3;
+				width: 100%;
+				color: $color__dark;
+			}
+
+			.motta-svg-icon {
+				opacity: 0;
+				@include font-size(18/16);
+				color: $color__dark;
+			}
+
+			&:hover {
+				background-color: $color__background-gray;
+			}
+
+			&.active {
+				background-color: $color__background-gray;
+
+				.motta-svg-icon {
+					opacity: 1;
+				}
+			}
+		}
+
+		.currency_button {
+			display: inline-flex;
+			justify-content: space-between;
+			align-items: center;
+			@include font-size(14/16);
+			padding: 2px 32px;
+			margin: 0;
+			line-height: 3;
+			width: 100%;
+			color: $color__dark;
+			&:after {
+				display: none;
+			}
+			.motta-svg-icon {
+				opacity: 0;
+				@include font-size(18/16);
+				color: $color__dark;
+			}
+
+			&:hover {
+				background-color: $color__background-gray;
+			}
+
+			&.active {
+				background-color: $color__background-gray;
+
+				.motta-svg-icon {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

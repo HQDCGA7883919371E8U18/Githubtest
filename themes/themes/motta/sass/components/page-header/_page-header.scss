@@ -1,0 +1,95 @@
+.site-breadcrumb {
+	@include font-size(12/16);
+	font-weight: 500;
+	color: $color__dark;
+	padding-top: 17px;
+	padding-bottom: 16px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	a,
+	span {
+		color: $color__gray;
+	}
+
+	.motta-svg-icon {
+		@include font-size(8/16);
+		margin-left: 8px;
+		margin-right: 9px;
+
+		/*rtl:raw:
+			transform: rotateY(180deg);
+		*/
+	}
+}
+
+.page-header {
+	.page-header__title {
+		@include font-size(54/16);
+		margin-top: 54px;
+		margin-bottom: 0;
+	}
+
+	.page-header__content {
+		text-align: center;
+	}
+
+	.page-header__description {
+		color: $color__dark;
+		line-height: (28/16);
+		width: 65%;
+		margin: 10px auto 0;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.site-breadcrumb +	.page-header__content {
+		margin-top: 10px;
+	}
+}
+
+.motta-blog-page {
+	.site-header:after {
+		display: none;
+	}
+	.page-header__title {
+		margin-top: 35px;
+	}
+
+	.page-header {
+		border-top: 1px solid #ecf0f4;
+		margin-top: -1px;
+	}
+
+
+
+	&:not(.motta-catalog-page) {
+		.page-header__content {
+			padding-bottom: 35px;
+		}
+	}
+}
+
+
+.page-header--archive-post {
+	.page-header__content {
+		padding-bottom: 44px;
+		margin-bottom: 25px;
+		@include line(100%);
+	}
+}
+
+.search-no-results {
+	.no-results {
+		.page-title {
+			margin-top: 0;
+		}
+	}
+}
+
+.motta-search__heading {
+	margin-top: 0;
+}

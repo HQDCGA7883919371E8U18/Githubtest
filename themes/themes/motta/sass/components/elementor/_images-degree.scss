@@ -1,0 +1,150 @@
+.motta-360-degree-viewer {
+	.motta-images-gallery-degree {
+        position: relative;
+		overflow: hidden;
+		cursor: ew-resize;
+	}
+
+	.product-degree__images {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        position: relative;
+
+        li {
+            height: 100%;
+            margin-bottom: 0;
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            max-width: 100%;
+
+            &.previous-image {
+                visibility: hidden;
+            }
+
+            &.current-image {
+                visibility: visible;
+            }
+        }
+    }
+
+	.motta-gallery-degree__spinner {
+        width: 40px;
+        display: block;
+        margin: 0 auto;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        margin-top: 0 !important;
+
+        &:before {
+            border-width: 2px;
+            border-color: $color__dark $color__dark $color__dark transparent;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            border-style: solid;
+            -webkit-animation: mottaSpin 1s linear infinite;
+            animation: mottaSpin 1s linear infinite;
+            content: " ";
+            width: 40px;
+            height: 40px;
+            font-weight: 400;
+            display: block;
+        }
+    }
+
+	.nav_bar {
+		display: none;
+
+		& + .motta-gallery-degree__nav-bar {
+			opacity: 1;
+		}
+	}
+
+    .motta-gallery-degree__nav-bar {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 25px;
+        z-index: 11;
+        display: flex;
+        align-items: center;
+		opacity: 0;
+		transition-delay: 0.5s;
+
+        a {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+            width: 44px;
+            height: 44px;
+            overflow: hidden;
+            color: #8e929b;
+            margin: 0 5px;
+			@include font-size(16/16);
+			border-radius: 50%;
+			background-color: #fff;
+			box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+
+            &:hover {
+                color: $color__dark;
+				border-color: $color__dark;
+            }
+
+			&.nav-bar__run {
+				@include font-size(24/16);
+
+				.pause {
+					display: none;
+					@include font-size(14/16);
+				}
+
+				&.active {
+					.play {
+						display: none;
+					}
+
+					.pause {
+						display: inline-block;
+					}
+				}
+			}
+
+        }
+
+        .nav-bar__prev,
+        .nav-bar__next {
+            /*rtl:raw:
+                transform: rotateY(180deg);
+		    */
+        }
+	}
+}
+
+/* html */
+.motta-product-gallery-degree:-webkit-full-screen {
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    padding-top: 200px;
+}
+
+.motta-product-gallery-degree:-moz-full-screen {
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    padding-top: 200px;
+}

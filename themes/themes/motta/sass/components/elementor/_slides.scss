@@ -1,0 +1,260 @@
+.motta-slides-elementor {
+	.item-slider {
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		height: 442px;
+		width: 100%;
+		border-radius: 2px;
+
+		&:not(:first-child) {
+			display: none;
+		}
+
+		&.swiper-slide {
+			display: block;
+		}
+	}
+
+	.slick-slide-inner {
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		justify-content: space-between;
+		padding: 0;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+	.motta-swiper-arrows-inner {
+		margin-left: auto;
+		margin-right: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		pointer-events: none;
+
+		.motta-swiper-button {
+			pointer-events: auto;
+		}
+	}
+
+	.elementor-element & {
+		.swiper-container ~ .swiper-pagination-bullets,
+		div.swiper-pagination.swiper-pagination-horizontal,
+		.swiper-pagination {
+			width: max-content;
+			margin-top: 0;
+			text-align: left;
+			position: absolute;
+			bottom: 41px;
+			left: calc(43px);
+			right: 0;
+			z-index: 1;
+			transition: background-color 0s;
+		}
+
+		.swiper-pagination-bullet {
+			opacity: 1;
+		}
+	}
+
+	.button-link-all {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	.motta-button-second {
+		margin-left: 32px;
+		z-index: 9;
+	}
+}
+
+.motta-slide__content {
+	position: relative;
+	padding: 38px 48px 48px 48px;
+}
+
+.motta-slide__subtitle {
+	@include font-size(11/16);
+	font-weight: 700;
+	color: #000;
+	margin-bottom: 4px;
+	display: block;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.motta-slide__title {
+	@include font-size(44/16);
+	line-height: 48px;
+	font-weight: 700;
+	margin-bottom: 11px;
+
+	+ .motta-slide-button {
+		margin-bottom: 17px;
+	}
+
+}
+
+.motta-slide__before-description {
+	@include font-size(18/16);
+	font-weight: 500;
+	margin-bottom: 6px;
+}
+
+.motta-slide__description {
+	@include font-size(14/16);
+	margin-bottom: 17px;
+	line-height: 22px;
+
+	p {
+		margin: 0;
+	}
+}
+
+.motta-slide__after-button{
+	margin-top: 12px;
+}
+
+.slick-slide-inner.slide-has-image {
+	.motta-slide__image  {
+		width: 50%;
+	}
+
+	.motta-slide__content {
+		width: 50%;
+	}
+}
+
+.motta-slide__image {
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	position: relative;
+}
+
+.motta-slide__after-description {
+	@include font-size(18/16);
+	font-weight: 700;
+
+	+ .motta-slide-button {
+		margin-top: 17px;
+	}
+}
+
+.motta-slides__dots-position-center {
+	.elementor-element & {
+		.swiper-container ~ div.swiper-pagination-bullets {
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 13px;
+			right: auto;
+		}
+	}
+}
+
+.motta-slides__dots-position-right {
+	.elementor-element & {
+		.swiper-container ~ div.swiper-pagination-bullets {
+			right: calc(43px);
+			left: auto;
+		}
+	}
+}
+
+// Arrow Style
+.motta-slides__arrow-position-right-bottom {
+	.motta-swiper-slider-elementor {
+		.motta-swiper-button {
+			@include font-size(14/16);
+			line-height: 46px;
+			bottom: 32px;
+			transition: background-color 0s;
+		}
+
+		.motta-swiper-button-prev {
+			right: calc(32px + 12px + 44px);
+		}
+
+		.motta-swiper-button-next {
+			right: 32px;
+		}
+	}
+}
+
+.motta-slides__arrow-position-left-bottom {
+	.motta-swiper-slider-elementor {
+		.motta-swiper-button {
+			@include font-size(14/16);
+			line-height: 46px;
+			bottom: 32px;
+			transition: background-color 0s;
+
+			/*rtl:raw:
+				transform: rotateY(0);
+			*/
+		}
+
+		.motta-swiper-button-next {
+			left: calc(32px + 12px + 44px);
+		}
+
+		.motta-swiper-button-prev {
+			left: 32px;
+		}
+	}
+}
+
+.motta-slides__arrow-position-center-center {
+	.elementor-element & {
+		.motta-swiper-button {
+			@include font-size(14/16);
+			color: #7c818b;
+			background-color: #ffffff;
+			border-radius: 8px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			/*rtl:raw:
+				transform: translateY(-50%) rotateY(180deg);
+			*/
+		}
+
+		.motta-swiper-button-prev {
+			left: 0;
+		}
+
+		.motta-swiper-button-next {
+			right: 0;
+		}
+	}
+
+}
+
+.motta-slides__paginations-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	pointer-events: none;
+
+	.motta-swiper-button,
+	.swiper-pagination {
+		pointer-events: auto;
+	}
+}

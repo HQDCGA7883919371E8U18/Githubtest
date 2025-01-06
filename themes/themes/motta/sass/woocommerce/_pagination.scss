@@ -1,0 +1,115 @@
+.woocommerce-pagination {
+	text-align: center;
+	margin-top: 62px;
+
+	ul {
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		flex-wrap: wrap;
+
+		li {
+			margin-bottom: 20px;
+		}
+
+		.page-numbers {
+			border: 2px solid $color__border-main;
+			border-radius: 50%;
+			width: 44px;
+			height: 44px;
+			line-height: 42px;
+			text-align: center;
+			@include font-size(14/16);
+			font-weight: 500;
+			color: $color__gray;
+			display: inline-block;
+
+			&:hover {
+				border-color: $color__dark;
+				color: $color__dark;
+			}
+
+			&.current {
+				border-color: $color__dark;
+				background-color: $color__dark;
+				color: $color__light;
+
+				&:hover,
+				&:focus,
+				&:focus-visible {
+					outline: none;
+				}
+			}
+
+			&.dots {
+				cursor: pointer;
+				border: none;
+				position: relative;
+				bottom: 5px;
+			}
+		}
+
+		.page-numbers {
+			display: inline-block;
+			margin: 0 4px;
+
+			&.prev,
+			&.next {
+				@include font-size(15/16);
+				line-height: 46px;
+				border: none;
+				box-shadow: 0px 2px 6px 0px rgba($color__dark, 0.16);
+				border-radius: 100%;
+
+				/*rtl:raw:
+					transform: rotateY(180deg);
+				*/
+
+				&:hover {
+					box-shadow: 0px 4px 8px 0px rgba($color__dark, 0.16);
+					color: $color__dark;
+				}
+			}
+
+			&.prev {
+				margin-right: 30px;
+			}
+
+			&.next {
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+.woocommerce-navigation {
+	&.woocommerce-navigation__catalog {
+		margin-top: 37px;
+		text-align: center;
+
+		&.ajax-infinite {
+			a {
+				display: none;
+			}
+		}
+
+		.motta-pagination--loading-text {
+			@include font-size(11/16);
+			color: $color__gray;
+			margin-top: 7px;
+		}
+	}
+}
+
+.woocommerce-nav-loadmore {
+	&.motta-posts-found {
+		margin-top: 37px;
+		margin-bottom: 26px;
+	}
+
+	+ .woocommerce-navigation {
+		margin-top: 0px;
+	}
+}

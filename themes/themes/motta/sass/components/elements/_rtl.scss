@@ -1,0 +1,95 @@
+.motta-rtl-smart {
+	.motta-slides-elementor .item-slider,
+	.motta-slides-elementor .motta-slide__image,
+	.page-header__image {
+		&:before {
+			/*rtl:raw:
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: auto;
+				height: auto;
+				background-image: inherit;
+				background-position-x: inherit;
+				background-position-y: inherit;
+				background-size: inherit;
+				background-repeat-x: inherit;
+				background-repeat-y: inherit;
+				background-attachment: inherit;
+				background-origin: inherit;
+				background-clip: inherit;
+				transform: rotateY(180deg);
+			*/
+		}
+	}
+
+	.motta-banner__featured-image{
+		/*rtl:raw:
+			transform: scale(1.01) rotateY(180deg);
+		*/
+	}
+
+	.motta-banner__image-zoom {
+		.motta-banner {
+			&:hover{
+				.motta-banner__featured-image{
+					/*rtl:raw:
+						transform: scale(1.1) rotateY(180deg);
+					*/
+				}
+			}
+		}
+	}
+
+	.header-category__menu {
+		.menu-item-has-background {
+			> ul {
+				&:after {
+					/*rtl:raw:
+						content: '';
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						width: auto;
+						height: auto;
+						background: inherit;
+						transform: rotateY(180deg);
+						z-index: -1;
+					*/
+				}
+			}
+		}
+	}
+}
+
+.rtl-bg {
+	> .elementor-widget-wrap {
+		&:before {
+			/*rtl:raw:
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: auto;
+				height: auto;
+				background-image: inherit;
+				background-position-x: inherit;
+				background-position-y: inherit;
+				background-size: inherit;
+				background-repeat-x: inherit;
+				background-repeat-y: inherit;
+				background-attachment: inherit;
+				background-origin: inherit;
+				background-clip: inherit;
+				transform: rotateY(180deg);
+			*/
+		}
+	}
+}

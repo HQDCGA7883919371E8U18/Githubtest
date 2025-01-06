@@ -1,0 +1,239 @@
+.motta-sticky-add-to-cart {
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16);
+
+	.motta-sticky-add-to-cart__content-wrapper{
+		padding: 10px 0;
+	}
+
+	.motta-sticky-add-to-cart__button-group{
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+
+		.motta-buy-now-button{
+			line-height: 44px;
+			height: 44px;
+			margin-left: 22px;
+
+			/*rtl:raw:
+				margin-left: 0;
+				margin-right: 22px;
+			*/
+		}
+
+		.ajax_add_to_cart {
+			span {
+				position: relative;
+
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 0;
+					height: 12px;
+					opacity: 0;
+					transition: width .2s;
+				}
+			}
+
+			&.loading {
+				span {
+					padding-left: 20px;
+
+					&::before {
+						position: absolute;
+						top: -6px;
+						left: 0;
+						opacity: 1;
+						width: 12px;
+						margin-right: 10px;
+						border-radius: 50%;
+						border: 2px solid;
+						border-top-color: transparent;
+						animation: mottaSpin infinite 1s linear;
+						transition: none;
+					}
+				}
+
+				svg {
+					display: none;
+				}
+			}
+
+			&.added {
+				span {
+					&::before {
+						width: 0;
+						animation: mottaSlideOut 0.2s linear 2s forwards;
+						transition: none;
+					}
+
+					&::after {
+						content: "";
+						position: absolute;
+						top: 10px;
+						left: 0;
+						border-top: 2px solid;
+						border-right: 2px solid;
+						transition: none;
+						transform: scaleX(-1) rotate(135deg);
+						transform-origin: left top;
+						animation: mottaButtonCheckAdded 2s ease forwards;
+					}
+
+					svg {
+						animation: mottaButtonCheckSuccess 1.5s ease forwards;
+					}
+				}
+			}
+		}
+	}
+
+	.motta-sticky-add-to-cart__button {
+		line-height: 44px;
+		height: 44px;
+		
+
+		.motta-svg-icon {
+			margin-right: 8px;
+			@include font-size(20/16);
+		}
+
+		.icon-shop-cart {
+			@include font-size(20/16);
+		}
+	}
+
+
+	&.product-variable {
+		.motta-sticky-add-to-cart__content-button:not(.is-wcpa-product) {
+			display: none;
+		}
+	}
+
+	&.product_variable_button {
+		.motta-sticky-add-to-cart__content-button {
+			display: block;
+		}
+	}
+
+	.quick-view-modal {
+		.woocommerce {
+			.entry-summary {
+				padding-bottom: 50px;
+			}
+		}
+	}
+}
+
+.single-product {
+	.motta-sticky-add-to-cart__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		> p.stock {
+			display: none;
+		}
+
+		&.product-gallery-summary{
+			margin-bottom: 0 !important;
+
+			.motta-sticky-add-to-cart__content-price {
+				&.price{
+					@include font-size(18/16);
+					display: flex;
+					align-items: baseline;
+					margin-top: 6px;
+
+					del {
+						order: 2;
+						margin-top: 0;
+					}
+
+					ins {
+						order: 1;
+						width: auto !important;
+					}
+
+					.price__save{
+						order: 3;
+						margin-top: 0;
+					}
+				}
+
+				.woocs_price_code {
+					display: flex;
+					align-items: baseline;
+				}
+			}
+		}
+	}
+}
+
+.motta-sticky-add-to-cart__content-button {
+	margin-left: auto;
+	position: relative;
+
+	.icon-shop-cart {
+		@include font-size(20/16);
+	}
+}
+
+.motta-header_sticky-act-active {
+	opacity: 0;
+}
+
+.motta-sticky-add-to-cart__layout-1,
+.motta-sticky-add-to-cart__layout-2,
+.motta-sticky-add-to-cart__layout-4,
+.motta-sticky-add-to-cart__layout-6 {
+	.motta-price__sale{
+		del{
+			display: none;
+		}
+	}
+}
+
+.motta-sticky-add-to-cart__layout-2,
+.motta-sticky-add-to-cart__layout-3,
+.motta-sticky-add-to-cart__layout-6 {
+	.motta-sticky-add-to-cart__icon-cart{
+		display: none;
+	}
+}
+
+.motta-sticky-add-to-cart__layout-1,
+.motta-sticky-add-to-cart__layout-2,
+.motta-sticky-add-to-cart__layout-6{
+	.percentage{
+		display: none;
+	}
+}
+
+.motta-sticky-add-to-cart__layout-6{
+	.motta-sticky-add-to-cart__percentage{
+		display: none;
+	}
+}
+
+.motta-sticky-add-to-cart__product-tabs{
+	border-top: 1px solid #edf1f5;
+
+	&.woocommerce-tabs{
+		ul.tabs{
+			li{
+				a{
+					border-bottom: 2px solid;
+					border-color: transparent;
+				}
+
+				&.active{
+					a{
+						border-color: #1d2128;
+						color: #1d2128;
+					}
+				}
+			}
+		}
+	}
+}

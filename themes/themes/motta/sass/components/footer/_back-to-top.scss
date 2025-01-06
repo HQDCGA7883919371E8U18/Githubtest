@@ -1,0 +1,29 @@
+#gotop {
+    position: fixed;
+    bottom: 100px;
+    right: 10px;
+    z-index: 999;
+    display: flex;
+    width: 36px;
+    height: 36px;
+    background-color: $color__dark;
+    color: $color__light;
+    box-shadow: 0px 2px 6px 0px var(--mt-input__box-shadow);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    border-radius: 50%;
+    transform: translateX(100%) rotate(-90deg);
+    transition: all .25s ease;
+
+    &.show-scroll{
+        opacity: 1;
+        transform: translateX(0) rotate(-90deg);
+    }
+}
+
+/*rtl:raw:
+#gotop.show-scroll {
+    transform: translateX(0) rotate(-90deg);
+}
+*/

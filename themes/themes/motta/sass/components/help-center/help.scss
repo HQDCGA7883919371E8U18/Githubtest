@@ -1,0 +1,245 @@
+.search-bar-hc {
+	padding: 50px 0;
+	text-align: center;
+}
+
+.search-bar-hc__title {
+	@include font-size(28/16);
+	font-weight: 700;
+	margin-bottom: 22px;
+}
+
+.search-bar-hc__form {
+	position: relative;
+}
+
+.search-bar-hc__field {
+	width: 100%;
+	padding-right: 70px;
+}
+
+.search-bar-hc__submit {
+	@include font-size(20/16);
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 60px;
+	height: 100%;
+	border: none;
+	color: #1d2128;
+}
+
+.search-bar-hc {
+	& > .container {
+		max-width: 590px;
+	}
+}
+
+.page-header-hc {
+	.site-breadcrumb {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.site-breadcrumb + .page-header__content {
+		margin-top: 0;
+	}
+
+	.page-header__title {
+		@include font-size(36/16);
+		font-weight: 500;
+		margin-top: 0;
+		text-align: left;
+		line-height: 1;
+
+		.motta-svg-icon {
+			padding-right: 10px;
+
+			img {
+				max-width: 30px;
+			}
+		}
+
+		small {
+			display: block;
+			@include font-size(16/16);
+			margin-top: 15px;
+			text-transform: lowercase;
+		}
+	}
+}
+
+.motta-help-archive {
+	.page-header,
+	.site-content {
+		& > .container {
+			max-width: 590px;
+		}
+	}
+
+	.motta-search__heading {
+		display: none;
+	}
+
+
+	.site-content {
+		padding-top: 50px;
+		padding-bottom: 110px;
+	}
+
+	.page-header + .site-content {
+		padding-top: 50px;
+	}
+
+	.motta-search__heading + .hentry {
+		border-top: 1px solid #ecf0f4;
+	}
+
+	.hentry {
+		flex-direction: column;
+		align-items: flex-start;
+		border-bottom: 1px solid #ecf0f4;
+		padding-top: 20px;
+		padding-bottom: 25px;
+		margin: 0;
+
+		&:first-child {
+			border-top: 1px solid #ecf0f4;
+		}
+
+		.help-title {
+			@include font-size(28/16);
+			font-weight: 500;
+		}
+
+		.help-short-description {
+			@include font-size(16/16);
+			margin-top: 10px;
+
+			p {
+				margin: 0;
+			}
+		}
+
+		.search-hightlight {
+			background-color: #b4f4de;
+		}
+
+	}
+
+	&.hfeed .hentry {
+		margin: 0;
+	}
+
+	&.search-results article {
+		margin-bottom: 0;
+	}
+
+	.pagination {
+		margin-top: 50px;
+	}
+
+	.motta-progress {
+		display: none;
+	}
+
+	&.search-no-results {
+		section.no-results {
+			border-top: 1px solid #ecf0f4;
+			padding-top: 30px;
+			.page-header,
+			.search-form {
+				display: none;
+			}
+		}
+	}
+}
+
+.single-motta_help_article {
+	.page-header__content {
+		border-bottom: 1px solid #ecf0f4;
+		padding-bottom: 40px;
+	}
+
+	.site-content {
+		padding-top: 45px;
+		padding-bottom: 45px;
+
+		ul {
+			margin-bottom: 0;
+		}
+	}
+
+	.entry-title {
+		@include font-size(54/16);
+		font-weight: 500;
+		margin-bottom: 25px;
+	}
+
+	.site-content .content-area {
+		display: flex;
+
+		.motta-help-sidebar {
+			order: 1;
+			flex: 26% 0 0;
+			padding-right: 30px;
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				padding: 15px 0;
+
+				a {
+					@include font-size(16/16);
+					font-weight: 500;
+					color: #7c818b;
+					position: relative;
+					padding-left: 20px;
+					display: block;
+
+					&:before {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 0;
+						width: 2px;
+						opacity: 0;
+						transition: height 0.35s;
+						background-color: #1d2128;
+					}
+
+					&:hover {
+						color: #1d2128;
+
+						&:before {
+							opacity: 1;
+							height: 100%;
+						}
+					}
+				}
+
+				&.current-post {
+					a {
+						color: #1d2128;
+
+						&:before {
+							opacity: 1;
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+
+		.hentry {
+			order: 2;
+			width: 100%;
+		}
+	}
+
+}

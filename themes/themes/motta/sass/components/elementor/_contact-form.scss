@@ -1,0 +1,88 @@
+.motta-contact-form {
+	/*rtl:raw:
+		text-align: right;
+	*/
+	select,
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="date"] {
+		width: 100%;
+		margin-bottom: 4px;
+		border: none;
+		/*rtl:raw:
+			text-align: right;
+		*/
+	}
+
+	textarea {
+		margin-bottom: 4px;
+		height: auto;
+		border: none;
+		padding: 21px 23px 9px;
+		/*rtl:raw:
+			text-align: right;
+		*/
+	}
+
+	p {
+		margin: 0 0 8px;
+	}
+
+	label {
+		color: $color__dark;
+		@include font-size(14/16);
+		font-weight: 500;
+		margin-top: 0;
+		margin-bottom: 7px;
+		display: inline-block;
+	}
+
+	.wpcf7-list-item {
+		margin-left: 0;
+	}
+
+	.wpcf7-checkbox {
+		.wpcf7-list-item-label {
+			@include font-size(14/16);
+			line-height: 20px;
+			color: $color__dark;
+			margin-left: 10px;
+			font-weight: 400;
+			/*rtl:raw:
+					margin-left: 10px;
+			*/
+		}
+
+		input[type="checkbox"] {
+			/*rtl:raw:
+				float: right;
+			*/
+		}
+	}
+
+	input[type="submit"] {
+		margin-top: 10px;
+		width: 100%;
+		background-color: $color__dark;
+		color: $color__light;
+		box-shadow: none;
+		border: none;
+	}
+
+	select {
+		color: #7c818b;
+	}
+
+}
+
+.motta-col2 {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+
+	.col-1,
+	.col-2 {
+		flex: 0 0 calc( 50% - 12px );
+	}
+}

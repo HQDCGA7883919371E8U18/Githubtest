@@ -1,0 +1,47 @@
+.entry-category {
+	a{
+		@include font-size(11/16);
+		color: $color__gray;
+		text-transform: uppercase;
+		font-weight: 700;
+
+		&:hover {
+			color: $color__link-hover;
+		}
+	}
+}
+
+.entry-title {
+	@include font-size(36/16);
+	font-weight: 700;
+	margin-top: 0;
+}
+
+.entry-meta {
+	color: $color__gray;
+	font-weight: 500;
+	@include font-size(12/16);
+	display: inline-flex;
+	text-transform: capitalize;
+
+	& > * {
+		margin-right: 22px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	.motta-svg-icon{
+		margin-right: 5px;
+		@include font-size(14/16);
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		top: 2px;
+
+		svg {
+			vertical-align: 0;
+		}
+	}
+}

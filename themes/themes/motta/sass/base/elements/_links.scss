@@ -1,0 +1,14 @@
+a {
+	color: $color__link;
+	text-decoration: none;
+	transition: 0.4s;
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

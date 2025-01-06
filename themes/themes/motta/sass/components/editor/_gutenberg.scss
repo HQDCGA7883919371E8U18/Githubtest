@@ -1,0 +1,236 @@
+.editor-styles-wrapper  {
+	.wp-block-code {
+		code {
+			background-color: transparent;
+		}
+	}
+
+	.wp-block-pullquote {
+		padding: 3em 0;
+	}
+
+	.editor-post-title .editor-post-title__input {
+		font-size: 2rem;
+    	font-weight: 700;
+	}
+
+	ul li,
+	ol li {
+		padding: 3px 0;
+	}
+
+	.mce-content-body {
+		line-height: 1.5;
+	}
+
+	select {
+		background: #fff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDQ4OCwgMjAyMC8wNy8xMC0yMjowNjo1MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIyLjAgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjM3QjIwQkNDMjVBRDExRUM5QkFEQjNEQ0I3NjBBM0UwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjM3QjIwQkNEMjVBRDExRUM5QkFEQjNEQ0I3NjBBM0UwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzdCMjBCQ0EyNUFEMTFFQzlCQURCM0RDQjc2MEEzRTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MzdCMjBCQ0IyNUFEMTFFQzlCQURCM0RDQjc2MEEzRTAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6sw4h6AAAAb0lEQVR42mKsaexmZGBgqAPiuUD8hAEVyABxBBD3sACJEiBuAOJYIHZAUgxSdACIlYGYiwlILAfiu1CBA1AFyIpAcvNYoCY4IEkcgJoIUwS2hQUqiK6YAVkRiMOC5HBkxQxo7kVRiKyYAT0EAAIMALwKGx4801sSAAAAAElFTkSuQmCC') no-repeat right 15px top 55% !important;
+	}
+
+	.widget-content textarea {
+		padding: 8px;
+	}
+}
+
+.wp-block {
+	max-width: 750px;
+
+	.mce-content-body {
+		margin: 1em 0 1.5em 0;
+	}
+
+	figcaption.mce-content-body {
+		margin: 0;
+	}
+
+	&[data-align="wide"],
+	&.alignwide {
+		max-width: 1140px;
+	}
+
+	&[data-align="full"],
+	&.alignfull {
+		max-width: none;
+	}
+
+
+	&.wp-block-button {
+		display: block;
+	}
+
+	p.wp-block-subhead {
+		font-size: 1.1em;
+	}
+
+	ul.wp-block-gallery {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	.wp-block-table {
+		td {
+			padding: 0.5em;
+		}
+
+		.editor-rich-text__tinymce {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	&.wp-block-quote {
+		margin-bottom: 1.75em;
+	}
+
+	.wp-block-pullquote {
+		blockquote:before {
+			display: none;
+		}
+	}
+
+
+	&.wp-block-cover a {
+		color: #fff;
+	}
+
+	.has-text-align-center {
+		text-align: center;
+	}
+
+	&[data-align=left]>.wp-block-cover,
+	&[data-align=right]>.wp-block-cover {
+		margin-bottom: 1.5em;
+	}
+
+	&[data-align=left] > *,
+	&.alignleft:not(.wp-block-pullquote) > *,
+	&.alignleft.wp-block-pullquote {
+		margin-right: 1.5em;
+	}
+
+	&[data-align=right] > *,
+	&.alignright:not(.wp-block-pullquote) > *,
+	&.alignright.wp-block-pullquote  {
+		margin-left: 1.5em;
+	}
+
+	&.wp-block-gallery {
+		margin-top: 0;
+	}
+
+	&[data-align=full] > .wp-block-columns p:not(.has-background),
+	&[data-align=full] > .wp-block-columns h1:not(.has-background),
+	&[data-align=full] > .wp-block-columns h2:not(.has-background),
+	&[data-align=full] > .wp-block-columns h3:not(.has-background),
+	&[data-align=full] > .wp-block-columns h4:not(.has-background),
+	&[data-align=full] > .wp-block-columns h5:not(.has-background),
+	&[data-align=full] > .wp-block-columns h6:not(.has-background) {
+		padding-left: 15px;
+		padding-right:  15px;
+	}
+
+}
+
+.post-type-page .wp-block {
+    max-width: 1170px;
+}
+
+.post-type-page .editor-styles-wrapper .wp-block[data-align=wide], .post-type-page .editor-styles-wrapper .wp-block.alignwide {
+    max-width: 1200px;
+}
+
+.post-type-page .editor-styles-wrapper .wp-block[data-align=full], .post-type-page .editor-styles-wrapper .wp-block.alignfull {
+    max-width: none;
+}
+
+.blocks-gallery-grid.blocks-gallery-grid {
+	padding-bottom: 0;
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce {
+	@import "base/elements/links";
+	@import "base/typography/headings";
+	@import "base/typography/copy";
+
+	ol,
+	ul {
+		padding: 0 0 1.5em 1.3em;
+	}
+
+	dl.alignleft {
+		margin: .5em 1em .5em 0;
+	}
+
+	dl.alignright {
+		margin: .5em 0 .5em 1em;
+	}
+}
+
+.editor-styles-wrapper {
+	.widget-content {
+		input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="password"],
+		input[type="search"],
+		input[type="number"],
+		input[type="tel"],
+		input[type="range"],
+		input[type="date"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="color"],
+		textarea,
+		select,
+		.select2
+		.select2-selection--single,
+		.motta-input--default,
+		.motta-type--input-text {
+			height: inherit;
+		}
+
+		button,
+		input[type="button"],
+		input[type="reset"],
+		input[type="submit"],
+		.button {
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				box-shadow: none;
+			}
+		}
+
+		input[type="checkbox"] {
+			border-color: transparent;
+
+			&:before {
+				top: -2px;
+				left: -2px;
+			}
+
+			&:checked::after {
+				top: 2px;
+				left: 6px;
+			}
+
+			&:checked::before {
+				margin: 0;
+			}
+		}
+
+		button {
+			min-width: auto;
+			line-height: inherit;
+		}
+
+		.motta-products-filter-form__filter-toggle {
+			background-color: transparent;
+			box-shadow: none;
+			padding: 10px;
+		}
+	}
+}

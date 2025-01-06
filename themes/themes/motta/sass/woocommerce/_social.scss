@@ -1,0 +1,189 @@
+.motta-breadcrumb-social-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 13px;
+	padding-bottom: 15px;
+
+	.site-breadcrumb {
+		padding: 0;
+	}
+}
+
+.motta-product-quick-links {
+	display: flex;
+	@include font-size(12/16);
+	font-weight: 500;
+	color: $color__gray;
+
+	.motta-button {
+		@include font-size(12/16);
+		color: $color__gray;
+		margin-left: 18px;
+
+		.motta-button__icon {
+			@include font-size(15/16);
+		}
+
+		.motta-button__text {
+			padding-left: 0;
+		}
+
+		&:after {
+			display: none;
+		}
+
+		&:hover {
+			color: $color__dark;
+		}
+	}
+
+	.motta-svg-icon {
+		@include font-size(15/16);
+		margin-right: 5px;
+	}
+
+	.motta-button--bg-color-black {
+		color: $color__light;
+
+		&:hover {
+			color: $color__light;
+		}
+	}
+}
+
+.product-socials__popup {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	display: none;
+
+	.product-socials__content {
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%, -30%);
+		background-color: $color__background-body;
+		padding: 24px 24px 64px;
+	}
+
+	.product-socials__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 58px;
+	}
+
+	.product-socials__heading {
+		@include font-size(18/16);
+		font-weight: 500;
+		color: $color__dark;
+		line-height: 1;
+	}
+
+	.product-socials__close {
+		position: static;
+
+		.motta-svg-icon {
+			@include font-size(16/16);
+			color: $color__dark;
+			margin-right: 0;
+		}
+	}
+
+	.post__socials-share {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 40px;
+
+		a {
+			flex-direction: column;
+			background-color: transparent;
+			margin: 0 24px 0 0;
+			padding: 0;
+
+			&:last-child {
+				margin-right: 0
+			}
+		}
+
+		.social-share__label {
+			@include font-size(14/16);
+			font-weight: 500;
+			color: $color__dark;
+		}
+
+		.motta-svg-icon {
+			@include font-size(17/16);
+			width: 64px;
+			height: 64px;
+			border-radius: 50%;
+			justify-content: center;
+			margin: 0 0 16px 0;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.product-socials__copylink {
+		border-top: 1px solid $color__border-main;
+		margin: 38px 40px 0;
+		padding-top: 40px;
+
+		.product-socials__copylink-heading {
+			@include font-size(14/16);
+			font-weight: 500;
+			line-height: 1;
+			color: $color__gray;
+			margin-bottom: 16px;
+		}
+
+		form {
+			position: relative;
+		}
+
+		.product-socials__copylink--link {
+			width: 100%;
+			@include font-size(12/16);
+			font-weight: 500;
+			color: $color__gray;
+			padding-right: 95px;
+		}
+
+		.product-socials__copylink--button {
+			position: absolute;
+			min-width: auto;
+			line-height: 44px;
+			top: 8px;
+			right: 8px;
+		}
+	}
+}
+
+body.socials-popup-opened {
+	overflow: visible;
+	padding-right: 0;
+}
+
+.motta-breadcrumb-social-wrapper .post__socials-share {
+	margin: 0 -10px;
+	a {
+		background-color: transparent;
+		color: #868b94;
+		@include font-size(15/16);
+		margin: 0;
+		padding: 0 10px;
+
+		span {
+			display: none;
+		}
+
+		.motta-svg-icon {
+			display: inline-block;
+			background-color: transparent;
+		}
+	}
+}

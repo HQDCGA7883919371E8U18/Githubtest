@@ -1,0 +1,31 @@
+.motta-list-style-default {
+	ul.elementor-icon-list-items,
+	ul {
+		list-style-type: disc;
+	}
+
+	ul.elementor-icon-list-items {
+		margin: 0 0 0 1.3em;
+	}
+
+	ul .elementor-icon-list-item,
+	ul li {
+		display: list-item;
+	}
+
+}
+
+.motta-list-style-ordered {
+	ul {
+		list-style: none;
+		counter-reset: item;
+		li {
+			&:before {
+				content: counter(item) ".";
+   				counter-increment: item;
+				padding-right: 10px;
+				font-weight: 700;
+			}
+		}
+	}
+}

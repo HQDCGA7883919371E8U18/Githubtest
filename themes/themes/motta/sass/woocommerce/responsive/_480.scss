@@ -1,0 +1,20 @@
+@media (max-width: 480px) {
+	.single-product div.product {
+		.motta-product-deal {
+			.deal-expire-date,
+			.deal-sold {
+				display: block;
+			}
+
+			.deal-sold-text {
+				display: none;
+			}
+
+			.deal-expire-text,
+			.deal-expire-countdown,
+			.deal-progress {
+				width: 100%;
+			}
+		}
+	}
+}

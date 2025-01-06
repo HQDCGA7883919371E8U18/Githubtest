@@ -1,0 +1,175 @@
+.comments-area  {
+	margin-top: 25px;
+	border-top: 1px  solid $color__border-main;
+}
+
+.comments-title{
+	@include font-size(24/16);
+	font-weight: 500;
+	margin: 30px 0 0;
+}
+
+.comment-list{
+	margin:0 ;
+	padding: 0;
+	list-style: none;
+	border-bottom: 1px  solid $color__border-main;
+
+	.children {
+		list-style: none;
+		margin-left: 30px;
+	}
+
+	.comment-meta{
+		position: relative;
+		~ .comment-content{
+			margin-left: 55px;
+		}
+	}
+
+	.avatar{
+		border-radius: 50%;
+		position: absolute;
+		left:0;
+	}
+
+	> li:first-child .comment-body{
+		border-top: none;
+	}
+
+	.comment-body{
+		padding: 25px 0 18px;
+		border-top: 1px solid $color__border-main;;
+	}
+
+	.comment-content{
+		@include font-size(16/16);
+		line-height: 1.85;
+		color: $color__dark;
+	}
+
+	.comment-metadata{
+		font-weight: 500;
+		margin-bottom: 9px;
+		.fn {
+			line-height: 1;
+			padding-top: 3px;
+			font-weight: 500;
+		}
+
+		.date {
+			@include font-size(12/16);
+			color: $color__gray;
+		}
+	}
+
+	.reply {
+		padding-top: 7px;
+		@include font-size(12/16);
+		color: $color__gray;
+		font-weight: 500;
+
+		a {
+			color: inherit;
+
+			&:hover {
+				color: $color__dark;
+			}
+
+			&:first-child {
+				padding-right: 10px;
+			}
+		}
+	}
+
+	.comment-respond {
+		.comment-reply-title {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
+
+.comment-respond{
+	margin-top: 27px;
+
+	.comment-reply-title{
+		@include font-size(24/16);
+		font-weight: 500;
+		margin: 0 0 9px;
+		text-transform: capitalize;
+	}
+
+	.comment-form{
+		margin-left: -15px;
+		margin-right: -15px;
+
+		.comment-notes,
+		.logged-in-as{
+			color: $color__gray;
+			a,
+			.required {
+				color: inherit;
+			}
+		}
+
+		p {
+			padding-left: 15px;
+			padding-right: 15px;
+			margin: 0 0 18px;
+			@include font-size(14/16);
+			span{
+				margin-bottom: 7px;
+				display: inline-flex;
+				font-weight: 500;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.comment-notes span{
+			font-weight: normal;
+		}
+
+		.comment-form-comment{
+			margin-bottom: 13px;
+
+			textarea {
+				height: 120px;
+			}
+		}
+
+		.comment-form-email{
+			margin-bottom: 41px;
+		}
+
+	}
+
+	.comment-form-author,
+	.comment-form-email{
+		width: 50%;
+		float: left;
+		input{
+			width: 100%;
+		}
+	}
+
+	.submit{
+		width: 100%;
+		background-color: $color__dark;
+		color: $color__light;
+		box-shadow: none;
+
+		&:hover {
+			background-color: $color__dark;
+			color: $color__light;
+			box-shadow: none;
+		}
+	}
+}
+
+.bypostauthor {
+	display: initial;
+}

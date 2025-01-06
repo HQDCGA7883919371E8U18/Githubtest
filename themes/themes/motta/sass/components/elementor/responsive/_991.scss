@@ -1,0 +1,93 @@
+@media (max-width: 991px) {
+	.motta-countdown{
+        .timer{
+            padding: 0 15px;
+        }
+
+        .digits{
+            margin-bottom: 4px;
+        }
+    }
+
+    //product-category-box
+	.motta-product-category-box {
+		.motta-product-category-box__items {
+			flex-wrap: nowrap;
+			margin: 0 -5px;
+            scroll-behavior: smooth;
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+		}
+
+		.motta-product-category-box__item {
+			padding: 0 5px;
+		}
+	}
+
+    // Product Tabs
+    .motta-product-tabs__tabs {
+        margin-bottom: 22px;
+
+        li {
+            @include font-size(16/16);
+            margin: 0 11px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .motta-google-map {
+        flex-direction: column;
+    }
+
+    .motta-google-map__markers {
+        flex: 100% 0 0;
+    }
+
+    .motta-google-map__wapper {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .motta-tablet-image-box-grid-scroll--yes {
+        .motta-image-box-grid {
+            @include scrollbar();
+            justify-content: flex-start;
+        }
+
+        .motta-image-box-grid__item {
+            margin: 0;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .motta-tablet-posts-grid-scroll--yes {
+        .motta-post-grid--elementor  {
+            @include scrollbar();
+            justify-content: flex-start;
+        }
+    }
+
+    .motta-product-tabs {
+        ul.products {
+            &.columns-4,
+            &.columns-5,
+            &.columns-6 {
+                li.product {
+                    width: 33.33%;
+                }
+            }
+        }
+    }
+}

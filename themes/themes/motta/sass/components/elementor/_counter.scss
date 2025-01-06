@@ -1,0 +1,24 @@
+.motta-counter__number-wrapper {
+	@include font-size(80/16);
+    font-weight: 700;
+	display: flex;
+	line-height: 1;
+	margin-bottom: 20px;
+	justify-content: center;
+}
+
+.motta-counter__number-prefix {
+	text-align: right;
+	white-space: pre-wrap;
+}
+
+.motta-counter__number-suffix {
+	text-align: left;
+	white-space: pre-wrap;
+}
+
+.motta-counter__title {
+	text-align: center;
+	@include font-size(36/16);
+	font-weight: 500;
+}

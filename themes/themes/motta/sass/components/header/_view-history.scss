@@ -1,0 +1,262 @@
+.header-items {
+	.header-view-history {
+		position: static;
+		height: 100%;
+	}
+}
+
+.header-view-history {
+	cursor: pointer;
+
+	.header-view-history__title {
+		@include font-size(12/16);
+		padding: 0 18px 0 0;
+		display: flex;
+		align-items: center;
+		height: inherit;
+
+		&:before {
+			content: "";
+			width: 100%;
+			height: 2px;
+			background-color: $color__dark;
+			position: absolute;
+			left: 0;
+			bottom: 0px;
+			border: none;
+			margin: 0;
+			opacity: 0;
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+
+	.header-view-history__name{
+		font-weight: 500;
+	}
+
+	.header-view-history__arrow {
+		position: absolute;
+		right: 0;
+		top: 45%;
+		transform: translateY(-50%);
+		@include font-size(11/16);
+		transition: .2s;
+	}
+
+	.header-view-history__button {
+		&.motta-button {
+			border-color: #1d2128;
+			line-height: 1.3;
+		}
+	}
+
+	&.motta-open {
+		.header-view-history__content {
+			opacity: 1;
+			pointer-events: initial;
+			transform: translateY(0);
+			visibility: visible;
+			z-index: 100;
+		}
+
+		& >.motta-button--text:before {
+			opacity: 1;
+		}
+	}
+}
+
+.header-view-history__content-heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	pointer-events: initial;
+	padding: 20px 0;
+}
+
+.header-view-history__content-title {
+	@include font-size(24/16);
+	font-weight: 500;
+	line-height: 32px;
+}
+
+.header-view-history__content {
+	background-color: #fff;
+	box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+	position: absolute;
+	padding-bottom: 32px;
+	min-width: 500px;
+	top: 100%;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	transform: translateY(10px);
+    pointer-events: none;
+	visibility: hidden;
+	transition: 0.25s;
+
+	.motta-pagination--loading {
+		padding: 30px 0;
+	}
+
+	ul.products {
+		text-align: left;
+	}
+}
+
+.header-view-history__wrapper {
+	pointer-events: none;
+	position: relative;
+
+	>.swiper-container-initialized,
+	>.swiper-initialized {
+		position: relative;
+		overflow: hidden;
+		z-index: 2;
+		pointer-events: none;
+
+		&:hover {
+			z-index: 3;
+		}
+	}
+
+	ul.products {
+		flex-wrap: nowrap;
+		z-index: 1;
+
+		li.product {
+			flex-shrink: 0;
+			margin-bottom: 0;
+
+			div.product-inner {
+				pointer-events: auto;
+				padding-bottom: 0;
+
+				.product-actions {
+					.button {
+						padding: 0;
+					}
+				}
+			}
+		}
+
+		&.product-card-layout-recently {
+			li.product {
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 1px;
+					width: 1px;
+					height: 100%;
+					background-color: #ecf0f4;
+					transition: .3s;
+					z-index: 10;
+				}
+
+				.product-inner {
+					&:hover {
+						box-shadow: none;
+						border-color: $color__border-main;
+
+						.woocommerce-loop-product__title {
+							a {
+								box-shadow: inset 0 -1px $color__dark;
+							}
+						}
+					}
+				}
+
+				.product-featured-icons {
+					display: none;
+				}
+
+				.product-summary {
+					padding-right: 0;
+					padding-left: 0;
+					display: flex;
+					flex-direction: column;
+
+					.meta-wrapper {
+						display: none;
+					}
+
+					.price {
+						display: inline-flex;
+						flex-wrap: nowrap;
+						margin-bottom: 0px;
+						order: 2;
+
+						.woocs_price_code {
+							display: inline-flex;
+							flex-wrap: nowrap;
+						}
+
+						ins {
+							margin-right: 6px;
+							color: #ff311c;
+						}
+
+						del {
+							@include font-size(14/16);
+							font-weight: 400;
+							color: #7c818b;
+						}
+
+						del,
+						ins {
+							width: auto;
+						}
+					}
+
+					.woocommerce-loop-product__title {
+						@include font-size(12/16);
+						order: 1;
+					}
+				}
+
+				.motta-rating {
+					display: none;
+				}
+
+				.product-actions {
+					display: none;
+				}
+			}
+		}
+
+	}
+
+	.motta-swiper-button {
+		position: absolute;
+		pointer-events: initial;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 99;
+	}
+
+	.motta-swiper-button-prev {
+		left: 0;
+	}
+	.motta-swiper-button-next {
+		right: 0;
+	}
+
+	.no-products {
+		text-align: center;
+		width: 100%;
+
+		p {
+			@include font-size(18/16);
+			font-weight: 500;
+		}
+	}
+
+	.swiper-slide-active {
+		&::before {
+			opacity: 0;
+		}
+	}
+}

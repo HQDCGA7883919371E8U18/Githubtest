@@ -1,0 +1,16 @@
+.breadcrumbs {
+	@include font-size(12/16);
+	color: $color__dark;
+	padding-top: 20px;
+	padding-bottom: 15px;
+
+	a,
+	span {
+		color: $color__gray;
+	}
+
+	.motta-svg-icon {
+		@include font-size(8/16);
+		margin: 0 7px 0 8px;
+	}
+}

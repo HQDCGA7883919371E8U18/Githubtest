@@ -1,0 +1,1213 @@
+.single-product {
+	div.product {
+		&.layout-1 {
+			.product-gallery-summary {
+				margin-bottom: 73px;
+
+				.price {
+					.percentage {
+						display: none;
+					}
+				}
+
+				table.variations {
+					tr {
+						&:last-child {
+							.value {
+								padding-bottom: 29px;
+							}
+						}
+					}
+				}
+
+				.single_add_to_cart_button {
+					.single_add_to_cart_button--icon {
+						display: inline-block;
+					}
+				}
+
+				+ .woocommerce-tabs {
+					margin-top: 0;
+				}
+			}
+
+			&.product-type-grouped {
+				.woocommerce-grouped-product-list {
+					.motta-quantity-wrapper {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		&.layout-2 {
+			.product-gallery-summary {
+				.product-meta-wrapper {
+					margin-bottom: 36px;
+				}
+
+				.price {
+					@include font-size(36/16);
+
+					.percentage {
+						display: none;
+					}
+				}
+
+				.motta-price-stock {
+					padding-bottom: 20px;
+					margin-bottom: 22px;
+				}
+
+				table.variations {
+					tr {
+						&:last-child {
+							.value {
+								padding-bottom: 40px;
+							}
+						}
+					}
+				}
+
+				.single_variation_wrap {
+					.woocommerce-variation-description {
+						> * {
+							&:last-child {
+								padding-bottom: 10px;
+							}
+						}
+					}
+				}
+			}
+
+			.woocommerce-Reviews {
+				.woocommerce-Reviews-title,
+				.motta-product-rating__title {
+					display: block;
+				}
+			}
+
+			&.product-type-grouped {
+				.woocommerce-grouped-product-list {
+					.motta-quantity-wrapper {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		&.layout-3 {
+			.product-gallery-summary {
+				padding-bottom: 25px;
+				margin-bottom: 32px;
+				border-bottom: 1px solid $color__border-main;
+
+				+ .woocommerce-tabs {
+					margin-top: 0;
+				}
+			}
+
+			.motta-price-stock {
+				.price {
+					ins {
+						width: auto
+					}
+
+					del {
+						@include font-size(18/16);
+						font-weight: 400;
+						margin: 6px 0 0 0;
+					}
+
+					.price__save {
+						font-weight: 500;
+						margin-top: 11px;
+						width: 100%;
+					}
+				}
+			}
+
+			.product-meta-wrapper {
+				.woocommerce-product-rating {
+					&::after {
+						margin-top: 2px;
+						content: '';
+						display: inline-block;
+						width: 1px;
+						height: 10px;
+						background-color: $color__border-main;
+						margin-right: 20px;
+						margin-left: 20px;
+					}
+				}
+			}
+
+
+			.related.products,
+			.upsells.products {
+				> h2 {
+					margin-top: 44px;
+				}
+			}
+
+			.product-thumbnails-vertical {
+				.woocommerce-product-gallery {
+					.motta-product-images-buttons {
+						left: 3px;
+						bottom: 3px;
+					}
+				}
+
+				.entry-summary {
+					padding-left: 56px;
+					padding-top: 6px;
+				}
+			}
+
+			&.product-type-grouped {
+				.woocommerce-grouped-product-list {
+					a.button {
+						line-height: 44px;
+						height: 44px;
+						width: 100%;
+					}
+
+					.motta-quantity-wrapper {
+						margin-bottom: 0;
+					}
+
+					.quantity {
+						width: 100%;
+
+						input {
+							flex: auto;
+						}
+					}
+				}
+			}
+
+			&.outofstock {
+				.woocommerce-badges {
+					display: block;
+				}
+			}
+
+			&.has-buy-now{
+				.quantity{
+					margin-bottom: 0;
+					margin-right: 20px;
+				}
+			}
+
+			&:not(.has-buy-now) {
+				.single_add_to_cart_button {
+					width: 100%;
+					float: none;
+				}
+			}
+
+			.motta-icon-box-widget {
+				display: flex;
+				justify-content: center;
+				border-left: 0;
+				border-right: 0;
+				border-bottom: 0;
+				border-radius: 0;
+				padding: 20px 0 0;
+
+				.motta-icon-box-widget__item {
+					flex-direction: column;
+					border-bottom: 0;
+					margin-bottom: 0;
+					padding: 0 20px;
+					text-align: center;
+				}
+
+				.motta-icon-box-widget__icon {
+					border: 1px solid $color__border-main;
+					border-radius: 100%;
+					margin-right: 0;
+					margin-bottom: 12px;
+					padding: 8px;
+				}
+
+				.motta-icon-box-widget__button {
+					margin-left: 0;
+					margin-top: 10px;
+					border-bottom: 1px solid;
+				}
+			}
+		}
+
+		&.layout-4 {
+			--motta-product-thumbnail-height: 80px;
+
+			.product-summary-wrapper {
+				width: 71.6%;
+				display: grid;
+				grid-auto-flow: column;
+				grid-template-areas:
+				"A A"
+				"B D"
+				"C D";
+				grid-template-columns: 56.385% 1fr;
+
+				.motta-breadcrumb-social-wrapper {
+					grid-area: A;
+					flex: 100%;
+					max-width: 100%;
+					padding-top: 16px;
+					padding-bottom: 22px;
+
+					.motta-social__item {
+						position: static;
+						visibility: visible;
+						opacity: 1;
+					}
+				}
+			}
+
+			.motta-product-gallery {
+				grid-area: B;
+				width: 100%;
+			}
+
+			.single-product-extra-content {
+				grid-area: C;
+			}
+
+			.entry-summary {
+				grid-area: D;
+				width: 100%;
+				padding-left: 24px;
+			}
+
+			.product-gallery-summary {
+				.motta-product-images-buttons {
+					bottom: var(--motta-product-thumbnail-height);
+					left: 50%;
+					transform: translateX(-50%);
+					flex-direction: row-reverse;
+
+					.swiper-button {
+						margin: 0 5px;
+					}
+				}
+
+				table.variations {
+					.label {
+						margin-bottom: 8px;
+					}
+
+					.value {
+						padding-bottom: 18px;
+					}
+				}
+
+				.reset_variations {
+					margin: 0;
+				}
+
+				.motta-quantity-wrapper {
+					margin-bottom: 23px;
+				}
+
+				.single_add_to_cart_button {
+					width: 100%;
+
+					.single_add_to_cart_button--icon {
+						display: inline-block;
+					}
+
+					& + .dokan-store-support-btn-product {
+						width: 100%;
+						margin-left: 0;
+						margin-top: 12px;
+						line-height: 44px;
+						height: 44px;
+					}
+				}
+
+				.single_add_to_cart_button,
+				.motta-buy-now-button {
+					line-height: 44px;
+					height: 44px;
+					float: none;
+				}
+
+				+ .woocommerce-tabs {
+					margin-top: 0;
+				}
+			}
+
+			.woocommerce-product-gallery {
+				position: relative;
+				.flex-viewport {
+					margin-bottom: 10px;
+				}
+
+				.motta-product-images-buttons .motta-button--icon {
+					margin:  0 5px;
+				}
+			}
+
+			.woocommerce-product-gallery__thumbs-carousel {
+				.swiper-container {
+					margin: 0 60px 0 65px;
+				}
+
+				.motta-swiper-button {
+					background-color: transparent;
+					color: $color__light-gray;
+					padding-left: 25px;
+					padding-right: 16px;
+
+					&:hover {
+						color: $color__dark;
+					}
+
+					&.swiper-button-disabled {
+						color: $color__light-gray;
+						cursor: default;
+					}
+
+					&.motta-thumbs-button-next {
+						padding-right: 25px;
+						padding-left: 16px;
+					}
+				}
+			}
+
+			.motta-single-product-sale__countdown {
+				.motta-single-product-sale__text {
+					display: none;
+				}
+			}
+
+			.meta-cat {
+				font-size: 0;
+				margin-bottom: 4px;
+
+				a {
+					@include font-size(14/16);
+					font-weight: 500;
+				}
+			}
+
+			.product_title {
+				@include font-size(18/16);
+				line-height: 24px;
+				margin-bottom: 13px;
+			}
+
+			.product-meta-wrapper {
+				border-bottom: 1px solid $color__border-main;
+				padding-bottom: 12px;
+				margin-bottom: 18px;
+
+				.woocommerce-product-rating {
+					&::after {
+						margin-top: 2px;
+						content: '';
+						display: inline-block;
+						width: 1px;
+						height: 10px;
+						background-color: $color__border-main;
+						margin-right: 20px;
+						margin-left: 20px;
+					}
+				}
+
+				.meta {
+					@include font-size(12/16);
+
+					&::after {
+						display: none;
+					}
+				}
+			}
+
+			.motta-price-stock {
+				padding-bottom: 18px;
+				margin-bottom: 16px;
+			}
+
+			.motta-single-product-sale {
+				@include font-size(11/16);
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+
+			&.product-type-grouped {
+				.outofstock {
+					a.button {
+						line-height: 44px;
+						height: 44px;
+						min-width: auto;
+						width: 100%;
+					}
+				}
+
+				.woocommerce-grouped-product-list {
+					.motta-quantity-wrapper {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			&.outofstock {
+				.woocommerce-badges {
+					display: block;
+				}
+			}
+
+			&.has-buy-now{
+				.quantity{
+					margin-right: auto;
+				}
+
+				.single_add_to_cart_button{
+					line-height: 44px;
+					height: 44px;
+				}
+
+				.motta-buy-now-button{
+					width: 100%;
+					margin-left: 0;
+					margin-top: 12px;
+					line-height: 44px;
+					height: 44px;
+				}
+
+				.quantity{
+					margin-bottom: 0;
+				}
+			}
+
+			&.product-type-external {
+				.entry-summary {
+					.product-featured-icons {
+						clear: both;
+						padding: 12px 0 0;
+					}
+				}
+			}
+
+			.entry-summary {
+				.product-featured-icons {
+					.motta-button {
+						margin-left: 20px;
+
+						&:first-child {
+							margin-left: 0;
+						}
+					}
+				}
+			}
+
+			.motta-icon-box-widget {
+				display: flex;
+				justify-content: center;
+				padding: 22px 3px;
+
+				.motta-icon-box-widget__item {
+					border-right: 1px solid $color__border-main;
+					flex-direction: column;
+					border-bottom: 0;
+					margin-bottom: 0;
+					padding: 0 30px;
+					text-align: center;
+
+					&:last-child {
+						border-right: 0;
+					}
+				}
+
+				.motta-icon-box-widget__icon {
+					margin-right: 0;
+					margin-bottom: 14px;
+				}
+
+				.motta-icon-box-widget__button {
+					margin-left: 0;
+					margin-top: 10px;
+					border-bottom: 1px solid;
+				}
+			}
+
+		}
+
+		&.layout-5 {
+			margin-top: 12px;
+			--motta-product-thumbnail-height: 90px;
+
+			.motta-product-gallery {
+				width: 40.352%;
+			}
+
+			.product-summary-wrapper {
+				width: 31.316%;
+				padding-left: 25px;
+			}
+
+			.entry-summary {
+				width: 28.334%;
+				padding-left: 56px;
+
+				.price {
+					del,
+					.price__save {
+						margin-top: 13px;
+					}
+				}
+
+				.product-featured-icons {
+					padding: 0;
+
+					.motta-button {
+						color: #7c818b;
+						margin-left: 20px;
+
+						&:first-child {
+							margin-left: 0;
+						}
+					}
+				}
+			}
+
+			.product-gallery-summary {
+				margin-bottom: 33px;
+
+				.woocommerce-product-gallery__image {
+					a {
+						img {
+							border: 1px solid $color__border-main;
+							border-radius: 2px;
+						}
+					}
+
+				}
+
+				.motta-product-images-buttons {
+					bottom: var(--motta-product-thumbnail-height);
+					left: 50%;
+					transform: translateX(-50%);
+					flex-direction: row-reverse;
+
+					.motta-button--icon {
+						margin: 0 5px;
+					}
+
+					.swiper-button {
+						margin: 0 5px;
+					}
+				}
+
+				table.variations {
+					.label {
+						margin-bottom: 8px;
+					}
+
+					.value {
+						padding-bottom: 18px;
+					}
+				}
+
+				.reset_variations {
+					margin: 0;
+				}
+
+				.motta-quantity-wrapper {
+					justify-content: space-between;
+					margin-bottom: 20px;
+				}
+
+				.single_add_to_cart_button {
+					width: 100%;
+
+					.single_add_to_cart_button--icon {
+						display: inline-block;
+					}
+
+					& + .dokan-store-support-btn-product {
+						width: 100%;
+						margin-left: 0;
+						margin-top: 12px;
+						line-height: 44px;
+						height: 44px;
+					}
+				}
+
+				.single_add_to_cart_button,
+				.motta-buy-now-button {
+					line-height: 44px;
+					height: 44px;
+					float: none;
+				}
+			}
+
+			.motta-single-product-sale__countdown {
+				.motta-single-product-sale__text {
+					display: none;
+				}
+			}
+
+			.woocommerce-product-gallery {
+				.flex-viewport {
+					margin-bottom: 10px;
+				}
+			}
+
+			.woocommerce-product-gallery__thumbs-carousel {
+				.swiper-container {
+					margin: 0 60px 0 65px;
+				}
+
+				.motta-swiper-button {
+					background-color: transparent;
+					color: $color__light-gray;
+					padding-left: 25px;
+					padding-right: 16px;
+
+					&:hover {
+						color: $color__dark;
+					}
+
+					&.swiper-button-disabled {
+						color: $color__light-gray;
+						cursor: default;
+					}
+
+					&.motta-thumbs-button-next {
+						padding-right: 25px;
+						padding-left: 16px;
+					}
+				}
+			}
+
+			.product_title {
+				@include font-size(18/16);
+				line-height: 24px;
+				margin-bottom: 10px;
+			}
+
+			.product-meta-wrapper {
+				border-bottom: 1px solid $color__border-main;
+				padding-bottom: 10px;
+				margin-bottom: 19px;
+
+				.meta-cat {
+					+ .meta {
+						&::before {
+							content: '';
+							display: inline-block;
+							width: 1px;
+							height: 10px;
+							background-color: $color__border-main;
+							margin-left: 20px;
+							margin-right: 20px;
+						}
+					}
+				}
+
+				.meta {
+					&::after {
+						display: none;
+					}
+				}
+
+				.woocommerce-product-rating {
+					&::after {
+						margin-top: 2px;
+						content: '';
+						display: inline-block;
+						width: 1px;
+						height: 10px;
+						background-color: $color__border-main;
+						margin-right: 20px;
+						margin-left: 20px;
+					}
+				}
+
+			}
+
+			.motta-price-stock {
+				padding-bottom: 17px;
+				margin-bottom: 20px;
+			}
+
+			.motta-single-product-sale {
+				@include font-size(11/16);
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+
+			&.product-type-grouped {
+				.woocommerce-grouped-product-list {
+					td {
+						@include font-size(14/16);
+						padding: 10px 5px;
+					}
+
+					a.button {
+						@include font-size(11/16);
+						line-height: 44px;
+						height: 44px;
+						min-width: auto;
+						width: 100%;
+					}
+
+					.motta-quantity-wrapper {
+						margin-bottom: 0;
+					}
+				}
+
+				.woocommerce-grouped-product-list-item__quantity {
+					.quantity {
+						width: 100%;
+					}
+				}
+			}
+
+			&.outofstock {
+				.woocommerce-badges {
+					display: block;
+				}
+			}
+
+			&.has-buy-now {
+				.single_add_to_cart_button{
+					line-height: 44px;
+					height: 44px;
+				}
+
+				.motta-buy-now-button{
+					width: 100%;
+					margin-left: 0;
+					margin-top: 12px;
+					line-height: 44px;
+					height: 44px;
+				}
+
+				.quantity{
+					margin-bottom: 0;
+					margin-right: auto;
+				}
+			}
+
+			//wishlist
+			&.product-type-external {
+				.product-featured-icons {
+					clear: both;
+					padding-top: 12px;
+				}
+			}
+
+			.motta-icon-box-widget {
+				border-radius: 0;
+				border-top: 0;
+				border-left: 0;
+				border-right: 0;
+				padding: 0 0 16px;
+				margin-bottom: 16px;
+
+				.motta-icon-box-widget__item {
+					border: 0;
+					padding: 0;
+					margin-bottom: 15px;
+				}
+
+			}
+
+			.short-description {
+				margin-bottom: 0;
+			}
+
+			.related {
+				border-top: 1px solid $color__border-main;
+				padding-top: 22px;
+
+				h2 {
+					margin-top: 0;
+				}
+			}
+		}
+
+		&.layout-6 {
+			.motta-product-gallery,
+			.motta-tabs-wrapper {
+				width: 65.965%;
+				float: left;
+			}
+
+			.product-summary-wrapper {
+				width: 32.018%;
+				float: right;
+
+				> div {
+					&:not( .single-product-extra-content ) {
+						width: auto;
+						box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16);
+						border-radius: 2px;
+						padding: 24px;
+						margin: 0;
+						height: fit-content;
+						margin-bottom: 15px;
+						border: none;
+					}
+					&.entry-summary {
+						padding-bottom: 32px;
+					}
+				}
+
+				.woocommerce-badges {
+					margin-bottom: 13px;
+				}
+
+				.single_add_to_cart_button,
+				.motta-buy-now-button {
+					line-height: 44px;
+					height: 44px;
+				}
+
+				.single_add_to_cart_button + .dokan-store-support-btn-product {
+					line-height: 44px;
+					height: 44px;
+				}
+
+				.variations_form {
+					.single_add_to_cart_button {
+						width: calc( 100% - 150px );
+						float: right;
+					}
+
+				}
+
+				.motta-product-images-buttons {
+					bottom: 3px;
+					left: 50%;
+					transform: translateX(-50%);
+					flex-direction: row-reverse;
+
+					.swiper-button {
+						margin: 0 5px;
+					}
+				}
+
+				.price {
+					@include font-size(24/16);
+
+					.percentage {
+						display: none;
+					}
+				}
+
+				.meta-cat {
+					font-size: 0;
+					margin-bottom: 6px;
+
+					a {
+						@include font-size(14/16);
+						font-weight: 500;
+					}
+				}
+
+				.product_title {
+					@include font-size(18/16);
+					line-height: 24px;
+					margin-bottom: 8px;
+				}
+
+				.woocommerce-product-rating {
+					margin-bottom: 22px;
+				}
+
+				.motta-price-stock {
+					padding-bottom: 22px;
+					margin-bottom: 20px;
+				}
+
+				.motta-product-deal {
+					.deal-expire-text,
+					.deal-sold-text {
+						@include font-size(14/16);
+						width: 25%;
+					}
+
+					.deal-expire-countdown,
+					.deal-progress {
+						width: 75%;
+					}
+
+					.timer {
+						width: auto;
+					}
+
+					.divider {
+						display: none;
+					}
+
+					.text {
+						@include font-size(12/16);
+					}
+				}
+
+				.quantity {
+					.motta-qty-button {
+						height: 44px;
+						padding: 0 8px;
+					}
+
+					input.qty {
+						width: 40px;
+					}
+				}
+
+				table.variations {
+					tr {
+						&:last-child {
+							.value {
+								padding-bottom: 32px;
+							}
+						}
+					}
+				}
+
+				.product-featured-icons {
+					.motta-button {
+						margin-left: 27px;
+
+						&:first-child {
+							margin-left: 0;
+						}
+
+					}
+				}
+			}
+
+			.entry-summary {
+				.product-featured-icons {
+					justify-content: space-between;
+					padding: 0;
+				}
+			}
+
+			.motta-tabs-wrapper {
+				display: flex;
+				flex-wrap: wrap;
+
+				.woocommerce-tabs {
+					width: 100%;
+				}
+
+				.woocommerce-tabs--description {
+					order: 1;
+
+					.woocommerce-tabs--description-content {
+						padding-bottom: 9px;
+					}
+				}
+
+				.wc-tabs-wrapper {
+					order: 2;
+				}
+
+				.woocommerce-tabs--reviews {
+					order: 3;
+
+					h4 {
+						margin-top: 0;
+					}
+				}
+			}
+
+			.product-gallery-summary {
+				display: inline-block;
+				width: 100%;
+				@include line(100%);
+				@include line-fullwide();
+				padding-bottom: 44px;
+				margin-bottom: 55px;
+
+				&::before {
+					height: 1px;
+				}
+
+				+ .products.related {
+					margin-top: 0;
+				}
+			}
+
+			.motta-single-product-sale {
+				@include font-size(11/16);
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+
+			div.product:not( .product-type-external ) {
+				.product-gallery-summary {
+					.product-featured-icons {
+						padding: 0 4px;
+					}
+				}
+			}
+
+			.side-products {
+				li {
+					margin-bottom: 12px;
+					padding-bottom: 12px;
+				}
+			}
+
+			.product_meta {
+				.dokan-vendor-info-wrap {
+					display: none;
+				}
+			}
+
+			.motta-single-product-sale__countdown {
+				.motta-single-product-sale__text {
+					display: none;
+				}
+			}
+
+			.product-thumbnails-vertical {
+				.woocommerce-product-gallery {
+					width: auto;
+				}
+			}
+
+			&.product-wc-tabs-dropdown {
+				.woocommerce-tabs {
+					.woocommerce-Tabs-panel {
+						padding: 16px 24px;
+					}
+
+					.motta-dropdown__title {
+						@include font-size(24/16);
+					}
+				}
+			}
+
+			&.product-type-grouped {
+				.woocommerce-grouped-product-list {
+					td {
+						@include font-size(14/16);
+						padding: 10px 5px;
+					}
+
+					a.button {
+						@include font-size(11/16);
+						line-height: 44px;
+						height: 44px;
+						min-width: auto;
+						width: 100%;
+					}
+
+					.motta-quantity-wrapper {
+						margin-bottom: 0;
+					}
+				}
+
+				.woocommerce-grouped-product-list-item__quantity {
+					.quantity {
+						width: 100%;
+					}
+				}
+			}
+
+			.related.products,
+			.upsells.products {
+				
+				> h2 {
+					margin-top: 0;
+					@include font-size(28/16);
+				}
+			}
+
+			.related.products {
+				margin-top: 43px;
+				border: none;
+			}
+
+			&.has-buy-now{
+				.quantity {
+					margin-bottom: 20px;
+
+				}
+
+				&.product-type-simple,
+				&.product-type-variable,
+				&.product-type-grouped {
+					.single_add_to_cart_button {
+						width: calc(50% - 10px);
+						float: none;
+					}
+				}
+			}
+
+			.single-product-extra-content {
+				.widget {
+					width: auto;
+					box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16);
+					border-radius: 2px;
+					padding: 24px 20px;
+					margin: 0;
+					height: fit-content;
+					margin-bottom: 15px;
+					border: none;
+				}
+			}
+
+			.motta-icon-box-widget {
+				border: none;
+				border-radius: 0;
+				padding: 0;
+				margin: 0;
+
+				.motta-icon-box-widget__item {
+					position: relative;
+					padding-bottom: 12px;
+					margin-bottom: 13px;
+					border-bottom: 0;
+
+					&::after {
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						display: block;
+						content: '';
+						border-bottom: 1px solid $color__border-main;
+						width: calc( 100% - 48px );
+						height: 1px;
+					}
+
+					&:last-child {
+						padding-bottom: 0;
+						margin-bottom: 0;
+
+						&::after {
+							display: none;
+						}
+					}
+				}
+
+				.motta-icon-box-widget__icon {
+					padding: 9px;
+					border-radius: 100%;
+					margin-right: 15px;
+				}
+
+				.motta-icon-box-widget__text {
+					@include font-size(14/16);
+					color: $color__dark;
+					margin-right: 12px;
+				}
+
+				.motta-icon-box-widget__button {
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}

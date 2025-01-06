@@ -1,0 +1,174 @@
+.wp-block-button__link {
+	@include button();
+}
+
+.wc-block-grid__products .wc-block-grid__product {
+	text-align: left;
+	.wc-block-grid__product-onsale {
+		@include font-size(11/14);
+		background-color: #ff311c;
+		color: #fff;
+		border: none;
+		text-transform: capitalize;
+		font-weight: 400;
+	}
+
+	.wc-block-grid__product-title {
+		@include font-size(14/16);
+		font-weight: 400;
+		line-height: 18px;
+		color: #1d2128;
+		margin-top: 6px;
+		margin-bottom: 0;
+	}
+
+	.wc-block-grid__product-price {
+		@include font-size(14/16);
+		font-weight: 500;
+		line-height: 22px;
+		color: #1d2128;
+		margin-top: 12px;
+	}
+
+	.wc-block-grid__product-rating .star-rating .max-rating {
+		position: static;
+	}
+
+	.wp-block-button__link {
+		line-height: 44px;
+	}
+}
+
+.wc-block-components-notice-banner {
+    align-content: flex-start;
+    align-items: stretch;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #2f2f2f;
+    display: flex;
+    font-size: .875em;
+    font-weight: 400;
+    gap: 12px;
+    line-height: 1.5;
+    margin: 16px 0;
+    padding: 16px!important
+}
+
+.wc-block-components-notice-banner>.wc-block-components-notice-banner__content {
+    align-self: center;
+    flex-basis: 100%;
+    padding-right: 16px;
+    white-space: normal
+}
+
+.wc-block-components-notice-banner>.wc-block-components-notice-banner__content:last-child {
+    padding-right: 0
+}
+
+.wc-block-components-notice-banner>.wc-block-components-notice-banner__content .wc-block-components-notice-banner__summary {
+    font-weight: 600;
+    margin: 0 0 8px
+}
+
+.wc-block-components-notice-banner>.wc-block-components-notice-banner__content ol,.wc-block-components-notice-banner>.wc-block-components-notice-banner__content ul {
+    margin: 0 0 0 24px;
+    padding: 0
+}
+
+.wc-block-components-notice-banner>.wc-block-components-notice-banner__content ol li:after,.wc-block-components-notice-banner>.wc-block-components-notice-banner__content ul li:after {
+    clear: both;
+    content: "";
+    display: block
+}
+
+.wc-block-components-notice-banner>.wc-block-components-notice-banner__content .wc-forward {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: #2f2f2f!important;
+    float: right;
+    margin: 0;
+    opacity: .6;
+    padding: 0!important;
+    text-decoration-line: underline;
+    text-underline-position: under
+}
+
+.wc-block-components-notice-banner>.wc-block-components-notice-banner__content .wc-forward:active,.wc-block-components-notice-banner>.wc-block-components-notice-banner__content .wc-forward:focus,.wc-block-components-notice-banner>.wc-block-components-notice-banner__content .wc-forward:hover {
+    opacity: 1
+}
+
+.wc-block-components-notice-banner>svg {
+    fill: #fff;
+    background-color: #2f2f2f;
+    border-radius: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 2px
+}
+
+.wc-block-components-notice-banner>.wc-block-components-button {
+    background: transparent none!important;
+    border: 0!important;
+    box-shadow: none!important;
+    color: #2f2f2f!important;
+    flex: 0 0 16px;
+    height: 16px!important;
+    margin: 6px 0 0 auto!important;
+    min-height: auto!important;
+    min-width: 0!important;
+    opacity: .6;
+    outline: none!important;
+    padding: 0!important;
+    width: 16px!important
+}
+
+.wc-block-components-notice-banner>.wc-block-components-button>svg {
+    margin: 0!important
+}
+
+.wc-block-components-notice-banner>.wc-block-components-button:active,.wc-block-components-notice-banner>.wc-block-components-button:focus,.wc-block-components-notice-banner>.wc-block-components-button:hover {
+    opacity: 1
+}
+
+.wc-block-components-notice-banner.is-error {
+    background-color: #fff0f0;
+    border-color: #cc1818
+}
+
+.wc-block-components-notice-banner.is-error>svg {
+    background-color: #cc1818;
+    transform: rotate(180deg)
+}
+
+.wc-block-components-notice-banner.is-warning {
+    background-color: #fffbf4;
+    border-color: #f0b849
+}
+
+.wc-block-components-notice-banner.is-warning>svg {
+    background-color: #f0b849;
+    transform: rotate(180deg)
+}
+
+.wc-block-components-notice-banner.is-success {
+    background-color: #f4fff7;
+    border-color: #4ab866
+}
+
+.wc-block-components-notice-banner.is-success>svg {
+    background-color: #4ab866
+}
+
+.wc-block-components-notice-banner.is-info {
+    background-color: #f4f8ff;
+    border-color: #007cba
+}
+
+.wc-block-components-notice-banner.is-info>svg {
+    background-color: #007cba
+}

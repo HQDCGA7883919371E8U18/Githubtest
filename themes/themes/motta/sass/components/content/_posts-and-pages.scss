@@ -1,0 +1,13 @@
+.entry-content,
+.page-content {
+	a {
+		&:not(.button):hover {
+			color: var( --mt-color__primary );
+		}
+	}
+
+	ul li,
+	ol li {
+		padding: 3px 0;
+	}
+}

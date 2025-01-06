@@ -1,0 +1,248 @@
+// Import variables and mixins
+@import "abstracts/abstracts";
+
+#marketking_stores_vendors_table_filter input[type="search"] {
+	border-radius: var(--mt-border__radius);
+	height: 44px;
+	background: transparent;
+}
+
+select[name="marketking_stores_vendors_table_length"], .marketking_frontend_store_categories_select_container .select2-selection {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDQ4OCwgMjAyMC8wNy8xMC0yMjowNjo1MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIyLjAgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjM3QjIwQkNDMjVBRDExRUM5QkFEQjNEQ0I3NjBBM0UwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjM3QjIwQkNEMjVBRDExRUM5QkFEQjNEQ0I3NjBBM0UwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzdCMjBCQ0EyNUFEMTFFQzlCQURCM0RDQjc2MEEzRTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MzdCMjBCQ0IyNUFEMTFFQzlCQURCM0RDQjc2MEEzRTAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6sw4h6AAAAb0lEQVR42mKsaexmZGBgqAPiuUD8hAEVyABxBBD3sACJEiBuAOJYIHZAUgxSdACIlYGYiwlILAfiu1CBA1AFyIpAcvNYoCY4IEkcgJoIUwS2hQUqiK6YAVkRiMOC5HBkxQxo7kVRiKyYAT0EAAIMALwKGx4801sSAAAAAElFTkSuQmCC);
+	border-width: var(--mt-input__border-width);
+    border-style: solid;
+    border-color: #dadfe3;
+	border-radius: var(--mt-border__radius);
+	height: 44px;
+}
+
+#marketking_stores_table_tbody tr {
+	box-shadow: 0px 2px 6px 0px rgba(0,0,0,.16);
+	background-color: transparent;
+
+	&:hover {
+		box-shadow: 0px 2px 6px 0px rgba(0,0,0,.16);
+	}
+}
+
+#marketking_stores_vendors_table_paginate a.paginate_button {
+	@include font-size(14/16);
+	border: 2px solid #ecf0f4;
+	font-weight: 500;
+    color: #7c818b !important;
+	border-radius: var(--mt-border__radius);
+
+	&:hover:not(.disabled):not(.current) {
+		color: #1d2128 !important;
+		background: none;
+		border-color: #1d2128;
+	}
+
+	&.current {
+		background-color: #1d2128;
+		border-color: #1d2128;
+		color: #fff !important;
+		cursor: default;
+	}
+}
+
+td.marketking_vendor_name {
+	@include font-size(18/16);
+	font-weight: 500;
+	color: #1d2128;
+}
+
+table#marketking_stores_vendors_table {
+	margin: 20px 0;
+}
+
+.marketking_arrow_icon_view_shop {
+	background-color: #1d2128;
+	border-color: #1d2128;
+}
+
+.marketking_tabclass button,
+#marketking_send_inquiry_button {
+	height: 44px;
+}
+
+.marketking_tabclass {
+	margin-top: 30px;
+}
+
+.marketking_tabclass .marketking_tabclass_left button.marketking_tablinks {
+	font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #7c818b;
+    padding: 20px 30px;
+    position: relative;
+
+	&:after {
+		content: '';
+		width: 0;
+		height: 2px;
+		background-color: #1d2128;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		transition: .4s;
+	}
+
+	&:hover {
+		background-color: transparent !important;
+		&:after {
+			width: 100%;
+		}
+	}
+}
+
+.marketking_tabclass .marketking_tabclass_left button.marketking_tablinks.active {
+	background-color: transparent !important;
+
+	&:after {
+		width: 100%;
+	}
+}
+
+.marketking_tab > h3 {
+	@include font-size(24/16);
+	margin: 0 0 20px;
+}
+
+.motta-vendor-result-ordering {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	select.orderby {
+		height: 44px;
+	}
+}
+
+// Vendor Information
+.single-product,
+.modal__quickview {
+	.motta-vendor-info {
+		border: none;
+		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16);
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 15px;
+
+		.motta-vendor-info__link {
+			display: flex;
+			align-items: center;
+		}
+
+		.motta-vendor-info__image {
+			width: 50px;
+			margin-right: 13px;
+
+			img {
+				border-radius: 100%;
+			}
+		}
+
+		.motta-vendor-info__content {
+			flex-direction: column;
+			align-items: flex-start;
+			margin-right: 10px;
+
+			.vendor-name {
+				@include font-size(16/16);
+				margin: 0;
+				line-height: 1.2;
+			}
+
+			.vendor-text {
+				@include font-size(14/16);
+				color: $color__gray;
+			}
+		}
+
+		.motta-vendor-info__rating {
+			display: flex;
+			align-items: center;
+			.ratings-count {
+				@include font-size(12/16);
+				font-weight: 500;
+				color: $color__gray;
+				margin: 0 0 0 8px;
+			}
+		}
+	}
+}
+
+.single-product div.product {
+	&.layout-4,
+	&.layout-5,
+	&.layout-6 {
+		.motta-vendor-info__rating {
+			flex-direction: column;
+			align-items: end
+		}
+	}
+}
+
+.woocommerce-cart {
+	.marketking_sold_by_title {
+		@include font-size(16/16);
+	}
+
+	.marketking_split_cart_form {
+		.quantity {
+			border: none;
+		}
+
+		.motta-qty-button {
+			padding: 0;
+		}
+
+		.coupon {
+			display: inline-block;
+			& > label {
+				display: none;
+			}
+			.input-text {
+				min-width: 200px;
+				height: var(--mt-size__medium);
+			}
+
+			.button {
+				@include font-size(14/16);
+				--mt-color__primary--box-shadow: rgba(29, 33, 40, 0.4);
+				background-color: #1d2128;
+				color: #fff;
+				min-width: 140px;
+				margin-left: 8px;
+				padding: 0 1.5em;
+				line-height: var(--mt-size__medium);
+			}
+		}
+
+		.actions {
+			button[name="update_cart"] {
+				--mt-color__primary--box-shadow: rgba(0,0,0,0);
+				color: var(--mt-color__primary);
+				background-color: transparent;
+				border-radius: 0;
+				border-bottom: 1px solid;
+				padding: 0;
+				min-width: auto;
+				line-height: 1.3;
+				color: #1d2128;
+				float: right;
+				margin-top: 15px;
+			}
+
+			.button-empty-cart  {
+				float: right;
+				margin-right: 35px;
+				margin-top: 15px;
+			}
+		}
+	}
+}

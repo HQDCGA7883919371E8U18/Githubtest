@@ -1,0 +1,52 @@
+.filter-sidebar-panel {
+	.panel__button-close {
+		right: 29px;
+	}
+
+	.panel__container {
+		width: 400px;
+	}
+
+	.panel__header,
+	.panel__content {
+		padding-left: 28px;
+		padding-right: 29px;
+	}
+
+	.panel__content {
+		@include scrollbar();
+		overflow-y: auto;
+		overflow-x: hidden;
+
+		> * {
+			border-top: 1px solid $color__border-main;
+		}
+
+		.products-filter__activated {
+			display: none;
+		}
+
+		.products-filter__button {
+			display: flex;
+			gap: 15px;
+
+			button {
+				line-height: 44px;
+			}
+
+			.reset-button {
+				order: 1;
+				display: block;
+				background-color: #ffffff;
+				border: 2px solid $color__dark;
+				color: $color__dark;
+			}
+
+			.filter-button {
+				order: 2;
+				background-color: $color__dark;
+				box-shadow: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,104 @@
+.header-preferences {
+	display: inline-flex;
+	align-items: center;
+	color: inherit;
+	font-weight: 500;
+
+	.motta-button__icon {
+		@include font-size(14/16);
+
+		&.motta-icon__flag {
+			@include font-size(16/16);
+
+			+ .motta-button__text {
+				padding-left: 10px;
+			}
+		}
+
+		+ .motta-button__text {
+			padding-left: 6px;
+			@include font-size(12/16);
+		}
+
+		img {
+			width: 16px;
+			height: 16px;
+			position: relative;
+			top: -3px;
+			object-fit: cover;
+			border-radius: 100%;
+		}
+	}
+
+	.motta-button__text {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+
+		.motta-button__subtext {
+			@include font-size(12/16);
+			line-height: 1;
+		}
+
+		.motta-button__subtext + .motta-button__text--preferences {
+			margin-top: 3px;
+			@include font-size(12/16);
+			line-height: 1;
+			max-width: 100px;
+			overflow: hidden;
+		}
+
+		&.language-code {
+			.motta-button__text--preferences {
+				text-transform: uppercase;
+
+				.divider {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	.motta-button--currency {
+		.motta-button__icon {
+			@include font-size(15/16);
+		}
+	}
+
+	a {
+		color: inherit;
+
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.header-preferences--header {
+	.motta-button__icon {
+		@include font-size(20/16);
+	}
+}
+
+.motta-button__text--preferences {
+	transition: .3s;
+
+	// &:hover {
+	// 	color: $color__dark;
+	// }
+
+	.divider {
+		margin-left: 3px;
+	}
+}
+
+.header-items .header-preferences .motta-button {
+	line-height: 1;
+}
+
+.topbar {
+	.header-preferences {
+		display: inline;
+		color: $color__gray;
+	}
+}

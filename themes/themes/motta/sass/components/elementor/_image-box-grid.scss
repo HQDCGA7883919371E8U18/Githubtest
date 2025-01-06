@@ -1,0 +1,56 @@
+.motta-image-box-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 -20px;
+}
+
+.motta-image-box-grid__item {
+	display: inline-flex;
+	flex-direction: column;
+	position: relative;
+	padding: 20px;
+	align-items: center;
+	justify-content: center;
+
+	a {
+		width: 100%;
+		display: contents;
+	}
+}
+
+.motta-image-box-grid__title {
+	@include font-size(18/16);
+	font-weight: 700;
+	display: block;
+}
+
+.motta--title-ellipsis-yes {
+	.motta-image-box-grid__title {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		width: 100%;
+	}
+}
+
+@media (min-width: 992px) {
+	.motta-image-box-grid-scroll--yes {
+		.motta-image-box-grid {
+			@include scrollbar();
+			justify-content: flex-start;
+		}
+
+		.motta-image-box-grid__item {
+            margin: 0;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+	}
+}

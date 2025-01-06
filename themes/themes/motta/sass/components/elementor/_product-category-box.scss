@@ -1,0 +1,55 @@
+.motta-product-category-box {
+	.motta-product-category-box__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+	}
+
+	.motta-product-category-box__item-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 100px;
+		background-color: #ffffff;
+		position: relative;
+	}
+
+	.motta-product-category-box__image {
+		padding: 0 10px;
+
+		img {
+			border-radius: 100%;
+		}
+	}
+
+	.motta-product-category-box__item {
+		position: relative;
+		padding: 0 15px;
+	}
+
+	.motta-product-category-box__content {
+		margin-top: 17px;
+	}
+
+	.motta-product-category-box__cat-name {
+		@include font-size(14/16);
+		font-weight: 500;
+	}
+
+	.motta-product-category-box__link {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.motta-product-category-box__button-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+}

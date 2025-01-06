@@ -1,0 +1,101 @@
+.mt-socials {
+	display: flex;
+}
+
+.mt-socials__item {
+	@include font-size(17/16);
+	color: $color__gray;
+	margin-right: 23px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:hover {
+		color: $color__dark;
+	}
+}
+
+.mt-socials--twitter {
+	background-color: #1da1f2;
+}
+
+.mt-socials--facebook {
+	background-color: #3b5998;
+}
+
+.mt-socials--google-plus {
+	background-color: #dd4f43;
+}
+
+.mt-socials--pinterest {
+	background-color: #c8232c;
+}
+
+.mt-socials--tumblr {
+	background-color: #34465d;
+}
+
+.mt-socials--reddit {
+	background-color: #5f99cf;
+}
+
+.mt-socials--linkedin {
+	background-color: #0077b5;
+}
+
+.mt-socials--stumbleupon {
+	background-color: #eb4924;
+}
+
+.mt-socials--digg {
+	background-color: #005be2;
+}
+
+.mt-socials--vk {
+	background-color: #45668e;
+}
+
+.mt-socials--telegram {
+	background-color: #0088cc;
+}
+
+.mt-socials--email {
+	background-color: #b7b7b7;
+}
+
+.mt-socials--blogger {
+	background-color: #fc4f08;
+}
+
+.mt-socials--tiktok {
+	background-color: #ff0050;
+}
+
+.mt-socials--flickr {
+	background-color: #0063dc;
+}
+
+.mt-socials--instagram {
+	background-color: #3f729b;
+}
+
+.mt-socials--youtube {
+	background-color: #FF0000;
+}
+
+.mt-socials--vimeo {
+	background-color: #86c9ef;
+}
+
+.mt-socials--dribbble {
+	background-color: #ea4c89;
+}
+
+.mt-socials--behance {
+	background-color: #053eff;
+}
+
+.mt-socials--github {
+	background-color: #4078c0;
+}

@@ -1,0 +1,72 @@
+// Button
+@mixin button() {
+	@include font-size(14/16);
+	border-radius: var(--mt-border__radius);
+	background-color: var(--mt-color__primary);
+	color: var(--mt-color__primary--light);
+	box-shadow: 0px 2px 6px 0px var(--mt-color__primary--box-shadow);
+	padding: 0 2em;
+	min-width: 160px;
+	font-weight: 500;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.4s;
+	border: none;
+	cursor: pointer;
+	line-height: 60px;
+
+	&:hover {
+		background-color: var(--mt-color__primary--dark);
+		box-shadow: 0px 4px 8px 0px var(--mt-color__primary--box-shadow);
+	}
+
+	&:active,
+	&:focus {
+		background-color: var(--mt-color__primary--darker);
+	}
+
+	&.motta-button--color-white {
+		&:active,
+		&:focus {
+			box-shadow: 0px 4px 8px 0px var(--mt-color__primary--box-shadow);
+		}
+	}
+}
+
+@mixin button-disabled() {
+	&.disabled,
+	&:disabled,
+	&:disabled[disabled] {
+		background-color: $color__background-disable;
+		color: $color__light;
+		border: none;
+		box-shadow: none;
+		cursor: not-allowed;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $color__background-disable;
+		}
+	}
+}
+
+@mixin button-large() {
+	@include font-size(14/16);
+	min-width: 160px;
+}
+
+@mixin button-medium() {
+	@include font-size(14/16);
+	min-width: 120px;
+	padding: 0 1.5em;
+	line-height: var(--mt-size__medium);
+}
+
+@mixin button-small() {
+	@include font-size(12/16);
+	min-width: 88px;
+	line-height: 32px;
+	padding: 0 1em;
+}

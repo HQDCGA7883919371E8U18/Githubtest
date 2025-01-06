@@ -1,0 +1,141 @@
+.header-account {
+	height: 100%;
+	display: flex;
+	align-items: center;
+
+	.motta-button__text {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+
+		.motta-button__subtext {
+			@include font-size(12/16);
+			line-height: 1;
+		}
+
+		.motta-button__subtext + .motta-button__text--account {
+			margin-top: 3px;
+			@include font-size(12/16);
+			line-height: 1.2;
+			max-width: 100px;
+			overflow: hidden;
+		}
+	}
+
+	.motta-button__icon > img {
+		max-width: 20px;
+		border-radius: 100%;
+		padding-right: 3px;
+	}
+
+	.account-dropdown {
+		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+		background-color: $color__light;
+		box-sizing: border-box;
+		min-width: 267px;
+		padding: 24px 0 15px 0;
+		float: left;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, 10px);
+		z-index: 99999;
+		transition: 0.3s;
+		opacity: 0;
+		pointer-events: none;
+		color: $color__dark;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: -10px;
+			left: 50%;
+			transform: translate(-50%);
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-bottom: 15px solid $color__light;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 12px 0 0 0;
+		}
+
+		li {
+			text-align: left;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				&:hover {
+					background-color: #ecf0f4;
+				}
+			}
+
+			.motta-svg-icon {
+				min-width: 42px;
+			}
+		}
+	}
+
+	.motta-open {
+		&.account-dropdown {
+			opacity: 1;
+			transform: translate(-50%, 0);
+			pointer-events: initial;
+		}
+	}
+
+	.account-dropdown__header {
+		display: flex;
+		align-items: center;
+		padding: 0 26px 16px 26px;
+		border-bottom: 1px solid #ecf0f4;
+	}
+
+	.motta-button--text {
+		line-height: var(--mt-size__medium);
+	}
+
+	.account-dropdown__avatar {
+		width: 32px;
+		height: 32px;
+		margin-right: 18px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #1d2128;
+		border-radius: 50%;
+
+		img {
+			border-radius: 50%;
+		}
+
+		span {
+			font-size: inherit;
+			color: $color__light-gray;
+		}
+	}
+
+	.account-dropdown__name {
+		text-transform: capitalize;
+		@include font-size(14/16);
+		font-weight: 500;
+	}
+
+	.account-panel__link {
+		a {
+			padding: 11px 33px;
+			line-height: 1;
+		}
+	}
+
+	.motta-button--ghost {
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}

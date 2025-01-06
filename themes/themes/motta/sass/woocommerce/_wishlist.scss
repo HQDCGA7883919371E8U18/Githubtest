@@ -1,0 +1,232 @@
+.woocommerce-wishlist {
+	.wcboost-wishlist-item {
+		border: 1px solid #ecf0f4;
+	}
+
+	.product-inner {
+		padding: 17px;
+	}
+
+	.product-remove {
+		position: absolute;
+		top: 11px;
+		right: 11px;
+		z-index: 99;
+	}
+
+	ul.products {
+		li.product {
+			margin-right: 2.1%;
+			width: 23.42%;
+			margin-bottom: 2.1%;
+
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+
+			.product-actions {
+				a.button {
+					margin-top: 12px;
+				}
+
+				.motta-svg-icon {
+					font-size: 16px;
+				}
+
+				.motta-svg-icon + .button_text {
+					padding-left: 5px;
+				}
+			}
+		}
+	}
+
+	.product-quantity {
+		margin-top: 12px;
+	}
+
+	.product-stock-status {
+		@include font-size(14/16);
+		margin-top: 12px;
+		color: #1d2128;
+	}
+
+	.product-date {
+		@include font-size(14/16);
+		margin-top: 5px;
+		color: #1d2128;
+	}
+
+	.wishlist-empty-form {
+		text-align: center;
+
+		.woocommerce-info {
+			padding: 0;
+			background-color: transparent;
+			@include font-size(28/16);
+			line-height: 32px;
+			color: #1d2128;
+			margin-bottom: 16px;
+		}
+
+		.woocommerce-info-description {
+			@include font-size(18/16);
+			line-height: 32px;
+			margin-top: 10px;
+			margin-bottom: 30px;
+		}
+
+		.return-to-shop {
+			a.button {
+				background-color: #1d2128;
+				color: #fff;
+				min-width: 200px;
+			}
+		}
+	}
+
+	.wishlist-empty-icon {
+		@include font-size(44/16);
+		margin-top: 17px;
+		margin-bottom: 22px;
+	}
+
+	.wishlist-share__buttons {
+		margin: 0 -10px;
+
+		li {
+			margin: 0 0 20px 0;
+			padding: 0 10px;
+
+			a {
+				@include font-size(14/16);
+				display: flex;
+				flex-direction: column;
+				background-color: transparent;
+				padding: 0;
+				font-weight: 500;
+				align-items: center;
+				line-height: 1;
+
+				.wcboost-wishlist-share-link__icon {
+					width: 64px;
+					height: 64px;
+					@include font-size(17/16);
+					margin: 0 0 10px 0;
+					border-radius: 50%;
+					font-weight: 500;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					padding: 13.5px;
+					line-height: 1;
+
+					svg {
+						fill: #fff;
+						margin-right: 0;
+						height: 1em;
+						display: inline-block;
+						line-height: 1;
+					}
+				}
+			}
+		}
+
+		.wishlist-share__facebook {
+			.wcboost-wishlist-share-link__icon {
+				background-color: #3b5998;
+			}
+		}
+
+		.wishlist-share__twitter {
+			.wcboost-wishlist-share-link__icon {
+				background-color: #1da1f2;
+			}
+		}
+
+		.wishlist-share__email{
+			.wcboost-wishlist-share-link__icon {
+				background-color: #616869;
+			}
+		}
+
+		.wishlist-share__tumblr {
+			.wcboost-wishlist-share-link__icon {
+				background-color: #34465d;
+			}
+		}
+
+		.wishlist-share__linkedin {
+			.wcboost-wishlist-share-link__icon {
+				background-color: #0A66C2;
+			}
+		}
+
+		.wishlist-share__reddit {
+			.wcboost-wishlist-share-link__icon {
+				background-color:  #FF4500;
+			}
+		}
+
+		.wishlist-share__stumbleupon {
+			.wcboost-wishlist-share-link__icon {
+				background-color:  #f74425;
+			}
+		}
+
+		.wishlist-share__telegram {
+			.wcboost-wishlist-share-link__icon {
+				background-color:  #0088cc;
+			}
+		}
+
+		.wishlist-share__whatsapp {
+			.wcboost-wishlist-share-link__icon {
+				background-color:  #25D366;
+			}
+		}
+
+		.wishlist-share__pocket {
+			.wcboost-wishlist-share-link__icon {
+				background-color:  #ED4255;
+			}
+		}
+
+		.wishlist-share__digg {
+			.wcboost-wishlist-share-link__icon {
+				background-color:  #005be2;
+			}
+		}
+
+		.wishlist-share__vk {
+			.wcboost-wishlist-share-link__icon {
+				background-color:  #4C75A3;
+			}
+		}
+
+		.wishlist-share__link {
+			.wcboost-wishlist-share-link__icon {
+				background-color:  #4C75A3;
+			}
+		}
+	}
+
+	form.wcboost-wishlist-form-edit {
+		.form-row {
+			label {
+				display: block;
+				@include font-size(14/16);
+				font-weight: 500;
+				color: #1d2128;
+				margin-bottom: 9px;
+			}
+
+			&.form-row--wishlist-privacy {
+				.woocommerce-input-wrapper {
+					.radio {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.motta-input--medium {
+	line-height: var(--mt-size__medium);
+	padding: 0 18px;
+	height: 48px;
+}
+
+.motta-input--base,
+.motta-skin--base {
+	--mt-input__border-width: 2px;
+	--mt-input__background-color: #fff;
+	--mt-input__box-shadow: rgba(0, 0, 0, 0);
+}
+
+.motta-skin--raised,
+.motta-input--raised {
+	--mt-input__border-width: 0;
+	--mt-input__box-shadow: rgba(0, 0, 0, 0.16);
+	--mt-input__background-color: #fff;
+}
+
+.motta-input--ghost,
+.motta-skin--ghost {
+	--mt-input__border-width: 2px;
+	--mt-input__background-color: #fff;
+	--mt-input__box-shadow: rgba(0, 0, 0, 0);
+}
+
+.motta-skin--smooth,
+.motta-input--smooth {
+	--mt-input__border-width: 0;
+	--mt-input__background-color: #ecf0f4;
+	--mt-input__box-shadow: rgba(0, 0, 0, 0);
+}
+
+.motta-skin--subtle,
+.motta-skin--text,
+.motta-input--subtle,
+.motta-input--text {
+	--mt-input__border-width: 0 0 1px 0;
+	--mt-input__background-color: #fff;
+	--mt-input__box-shadow: rgba(0, 0, 0, 0);
+}

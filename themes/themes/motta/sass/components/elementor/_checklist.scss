@@ -1,0 +1,47 @@
+.motta-checklist__item {
+	display: flex;
+	margin-bottom: 32px;
+
+	&.none {
+		.motta-checklist__icon {
+			background-color: #dadfe3;
+			color: #dadfe3;
+		}
+
+		.motta-checklist__title,
+		.motta-checklist__description {
+			color: $color__gray;
+		}
+	}
+}
+
+.motta-checklist__icon {
+	display: inline-flex;
+	@include font-size(18/16);
+	flex: 0 0 32px;
+	width: 32px;
+	height: 32px;
+	background-color: #33ff93;
+	border-radius: 100%;
+	align-items: center;
+	justify-content: center;
+	margin-right: 22px;
+}
+
+.motta-checklist__wrapper {
+	margin-top: 5px;
+}
+
+.motta-checklist__title {
+	@include font-size(18/16);
+	line-height: 24px;
+	font-weight: 500;
+	color: $color__dark;
+	margin-bottom: 7px;
+}
+
+.motta-checklist__description {
+	@include font-size(14/16);
+	line-height: 20px;
+	color: $color__dark;
+}

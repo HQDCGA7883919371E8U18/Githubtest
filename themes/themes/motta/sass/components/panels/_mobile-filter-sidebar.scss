@@ -1,0 +1,117 @@
+@media (min-width: 991px) {
+	.sidebar__header,
+	.catalog-sidebar .sidebar__container > .panel__button-close {
+		display: none;
+	}
+}
+
+@media (max-width: 990px) {
+	.offscreen-panel--side-left {
+		.sidebar__container {
+			left: 0;
+			right: auto;
+			transform: translateX(-100%);
+		}
+	}
+
+	.offscreen-panel--open {
+		.sidebar__container {
+			transform: none;
+		}
+	}
+
+	.offscreen-panel {
+		.sidebar__backdrop {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+			background-color: rgba( 0, 0, 0, 0.2);
+		}
+	}
+
+	.sidebar__header {
+		padding: 18px 16px 27px;
+		@include font-size(18/16);
+		color: $color__dark;
+		font-weight: 500;
+		position: relative;
+
+		&:after {
+			content: '';
+			width: calc( 100% - 32px );
+			height: 1px;
+			background-color: $color__border-main;
+			position: absolute;
+			left: 16px;
+			right: 16px;
+			bottom: 0;
+		}
+	}
+
+	.sidebar__container {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 375px;
+		max-width: 100%;
+		margin: 0;
+		background-color: #fff;
+		box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);;
+		transform: translateX(100%);
+		transition: transform 0.5s;
+		display: flex;
+		flex-direction: column;
+
+		.panel__button-close {
+			right: 18px;
+			z-index: 9;
+		}
+	}
+
+	.sidebar__content {
+		@include scrollbar();
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.catalog-sidebar {
+		.products-filter-widget {
+			.widget-title {
+				display: none;
+			}
+
+			.reset-button {
+				display: block;
+			}
+
+			.products-filter__button {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 375px;
+				background-color: $color__light;
+				display: flex;
+
+				box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+				-webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+				-moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+
+				.filter-button {
+					order: 2;
+				}
+
+				.button {
+					line-height: 44px;
+					height: 44px;
+					margin: 8px;
+				}
+			}
+		}
+	}
+}

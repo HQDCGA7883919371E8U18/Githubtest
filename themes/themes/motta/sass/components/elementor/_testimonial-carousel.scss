@@ -1,0 +1,150 @@
+.motta-testimonial-carousel--elementor {
+	.motta-testimonial__inner {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	.motta-swiper-button {
+		@include font-size(16/16);
+		top: 50%;
+		transform: translateY( -50% );
+
+		/*rtl:raw:
+			transform: translateY(-50%) rotateY(180deg);
+		*/
+	}
+
+	.motta-swiper-button-prev {
+		left: -22px;
+	}
+
+	.motta-swiper-button-next {
+		right: -22px;
+	}
+}
+
+.motta-testimonial__list {
+	padding: 6px;
+	margin: -6px;
+}
+
+.motta-testimonial__item {
+	text-align: center;
+	color: $color__dark;
+	height: auto;
+}
+
+div.motta-testimonial__rating {
+	@include font-size(24/16);
+	width: auto;
+    height: auto;
+	text-align: center;
+	margin: 0 auto 20px;
+
+	.user-rating {
+		color: $color__dark;
+		left: 0;
+		top: 0;
+	}
+
+	.max-rating {
+		position: static;
+	}
+}
+
+.motta-testimonial__content {
+	@include font-size(14/16);
+	font-weight: 500;
+	margin-bottom: 27px;
+}
+
+.motta-testimonial__name {
+	font-weight: 500;
+	margin-top: 19px;
+}
+
+.motta-testimonial__company {
+	@include font-size(12/16);
+}
+
+.motta-testimonial__brand {
+	margin-top: 10px;
+}
+
+.motta-testimonial__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.motta-testimonial__left {
+	display: flex;
+	align-items: center;
+}
+
+.motta-testimonial__image-position--top {
+	.motta-testimonial__rating {
+		margin-top: 26px;
+		margin-bottom: 17px;
+	}
+
+	.motta-testimonial__content {
+		margin-bottom: 0;
+	}
+
+	.motta-testimonial__name {
+		@include font-size(24/16);
+	}
+
+	.motta-testimonial__company {
+		@include font-size(16/16);
+	}
+}
+
+.motta-testimonial__image-position--left {
+	.motta-testimonial__item {
+		text-align: left;
+		box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16);
+		padding: 48px 48px 43px 48px;
+		border-radius: 3px;
+	}
+
+	div.motta-testimonial__rating {
+		margin: 30px 0 12px;
+	}
+
+	.motta-testimonial__content {
+		margin-bottom: 0;
+	}
+
+	.motta-testimonial__name {
+		margin-top: 0;
+		margin-left: 20px;
+	}
+
+	.motta-testimonial__company {
+		margin-left: 20px;
+	}
+
+	.motta-testimonial__brand {
+		margin-top: 0;
+	}
+}
+
+@media (min-width: 1025px) {
+	.motta-testimonial-carousel--elementor.navigation-both .motta-swiper-button {
+		top: calc( 50% - 32px);
+	}
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+	.motta-testimonial-carousel--elementor.navigation-tablet-both .motta-swiper-button {
+		top: calc( 50% - 32px);
+	}
+}
+
+@media (max-width: 767px) {
+	.motta-testimonial-carousel--elementor.navigation-mobile-both .motta-swiper-button {
+		top: calc( 50% - 32px);
+	}
+}

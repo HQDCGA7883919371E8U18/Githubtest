@@ -1,0 +1,67 @@
+@media (max-width: 991px){
+	.trending-posts--layout-2 {
+		.entry-summary {
+			padding: 0 20px 0 25px;
+		}
+
+		.entry-title {
+			@include font-size(24/16);
+			line-height: (24/16);
+		}
+
+		.entry-meta__author {
+			margin-bottom: 5px;
+		}
+	}
+
+	.trending-posts--layout-3 {
+		.trending-posts__thumbnail {
+			width: 55%;
+		}
+
+		.entry-title {
+			@include font-size(24/16);
+		}
+	}
+
+	.hfeed {
+		.hentry {
+			+ .motta-posts-found {
+				margin-top: 0;
+				position: relative;
+				top: -2px;
+			}
+		}
+
+		.blog-sidebar {
+			padding-top: 28px;
+			margin-top: 32px;
+		}
+	}
+
+	.featured-posts__content {
+		.swiper-button {
+			top: 63px;
+		}
+	}
+
+	.blog-sidebar,
+	.single-sidebar {
+		margin-top: 34px;
+		padding-top: 30px;
+		@include line();
+
+		.widget {
+			&:last-child {
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 782px){
+	.motta-header-sticky.admin-bar .site-header.minimized {
+		top: 46px;
+	}
+}

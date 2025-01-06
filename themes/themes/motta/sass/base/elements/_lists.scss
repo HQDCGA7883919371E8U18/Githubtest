@@ -1,0 +1,23 @@
+ul,
+ol {
+	padding: 0 0 1.5em 1.3em;
+	margin-left: 0;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	padding-bottom: 0;
+	padding-left: 1.5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}

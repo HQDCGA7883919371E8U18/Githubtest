@@ -1,0 +1,96 @@
+.motta-modal-popup--elementor {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+	border-radius: 3px;
+	padding: 38px 40px 48px;
+
+	.swiper-pagination {
+		margin-top: 30px;
+	}
+}
+
+.motta-modal-popup__title {
+	@include font-size(28/16);
+	font-weight: 500;
+}
+
+.motta-modal-popup__description {
+	@include font-size(15/16);
+	text-align: center;
+	margin-top: 12px;
+}
+
+.motta-modal-popup__button {
+	--mt-color__primary--box-shadow: none;
+	line-height: 44px;
+	margin-top: 23px;
+}
+
+.motta-modal-popup__wrapper {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background-color: $color__light;
+	z-index: 9;
+}
+
+.motta-modal-popup__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 24px 0;
+
+	.motta-modal-popup__title {
+		@include font-size(16/16);
+	}
+}
+
+.motta-modal-popup__inner {
+	padding: 20px 40px 50px;
+}
+
+.popup-content__button-close {
+	@include font-size(21/16);
+	color: $color__dark;
+	top: 8px;
+}
+
+.admin-bar {
+	.motta-modal-popup__content {
+		top: 32px;
+	}
+}
+
+@media ( max-width: 780px ) {
+	.admin-bar {
+		.motta-modal-popup__content {
+			top: 46px;
+		}
+	}
+}
+
+@media ( max-width: 767px ) {
+	.motta-modal-popup__content {
+	}
+
+	.motta-modal-popup__wrapper {
+		width: 100%;
+		max-height: calc( 100vh - 150px );
+		overflow-y: auto;
+	}
+
+	.motta-modal-popup__inner {
+		padding: 20px 8px 20px;
+	}
+}
+
+@media ( max-width: 600px ) {
+	.admin-bar {
+		.motta-modal-popup__content {
+			top: 0;
+		}
+	}
+}

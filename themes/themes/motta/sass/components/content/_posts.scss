@@ -1,0 +1,293 @@
+.hentry {
+	.post-thumbnail {
+		position: relative;
+	}
+
+	.post-format-icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate( -50%, -50% );
+		@include font-size(24/16);
+		color: $color__light;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 44px;
+			height: 44px;
+			border: 2px solid $color__light;
+			border-radius: 50%;
+			background-color: rgba( 0, 0, 0, .23 );
+			z-index: -1;
+		}
+
+		&.icon-gallery {
+			@include font-size(18/16);
+		}
+	}
+}
+
+.hfeed {
+	.hentry {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 24px;
+
+		.entry-summary {
+			flex: 1;
+			width: 100%;
+			margin-bottom: 8px;
+		}
+
+		.entry-category {
+			margin-bottom: 6px;
+		}
+
+		.entry-title {
+			@include font-size(18/16);
+			line-height: (24/16);
+			margin-bottom: 12px;
+		}
+
+		.entry-excerpt {
+			@include font-size(14/16);
+			color: $color__gray;
+			margin-bottom: 10px;
+
+			p {
+				margin: 0;
+			}
+		}
+
+		.post-thumbnail {
+			max-width: 50%;
+			margin-right: 23px;
+			position: relative;
+
+			img {
+				border-radius: $border__radius-main;
+			}
+
+			& + .entry-summary {
+				width: auto;
+			}
+		}
+	}
+}
+
+.search-results {
+	.content-area {
+		article {
+			margin-bottom: 24px;
+
+			.entry-title {
+				@include font-size(18/16);
+				line-height: (24/16);
+				margin-bottom: 12px;
+			}
+
+			.entry-excerpt {
+				@include font-size(14/16);
+				color: $color__gray;
+				margin-bottom: 10px;
+
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+.search-no-results {
+	section.no-results .page-header {
+		padding-top: 30px;
+	}
+}
+
+.blog--classic {
+	.site-main {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -12px;
+		margin-right: -12px;
+
+		.hentry {
+			display: inline-block;
+			width: map_get( $columns, 2 );
+			padding: 0 12px;
+		}
+
+		.entry-summary {
+			margin-bottom: 0;
+		}
+
+		.post-thumbnail {
+			display: inline-block;
+			width: 100%;
+			max-width: none;
+			margin-right: 0;
+			margin-bottom: 5px;
+		}
+
+		.entry-excerpt ,
+		.entry-meta__author {
+			display: none;
+		}
+
+		.entry-read-more {
+			display: none;
+			margin-top: 23px;
+		}
+
+		.post-large {
+			width: 100%;
+			@include line(100%);
+			padding-bottom: 24px;
+
+			&::before {
+				width: calc( 100% - 24px );
+				left: 12px;
+			}
+
+			.entry-title {
+				@include font-size(28/16);
+				line-height: (32/24);
+			}
+
+			.entry-excerpt ,
+			.entry-meta__author {
+				display: block;
+			}
+
+			.entry-read-more {
+				display: block;
+			}
+		}
+	}
+
+	.motta-posts-group ,
+	.motta-recent-post__heading {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+}
+
+.blog--grid {
+	.site-main {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -12px;
+		margin-right: -12px;
+
+		.hentry {
+			display: inline-block;
+			width: map_get( $columns, 3 );
+			padding: 0 12px;
+		}
+
+		.post-thumbnail {
+			display: inline-block;
+			width: 100%;
+			max-width: none;
+			margin-right: 0;
+			margin-bottom: 5px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.entry-summary {
+			margin-bottom: 0;
+		}
+
+		.entry-title {
+			margin-bottom: 9px;
+		}
+	}
+
+	.motta-posts-group ,
+	.motta-recent-post__heading {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.motta-posts-found {
+		margin-top: 24px
+	}
+}
+
+.motta-blog-page {
+	.site-content {
+		padding-bottom: 50px;
+	}
+
+	.page-header + .site-content {
+		padding-top: 36px;
+	}
+}
+
+.motta-recent-post__heading {
+	@include font-size(24/16);
+	font-weight: 500;
+	line-height: 1;
+	margin: 0 0 27px 0;
+	flex: 1 1 100%;
+}
+
+.archive {
+	&.tag,
+	&.author {
+		.blog-header__title {
+			@include font-size(54/16);
+		}
+	}
+}
+
+.category {
+	.motta-posts-group {
+		~ .no-results {
+			.page-header {
+				display: none;
+			}
+		}
+	}
+}
+
+.single-motta_popup {
+	.site {
+		position: relative;
+		.motta-single-popup {
+			display: block;
+			position: static;
+			transform: none;
+			.motta-popup__content {
+			    position: relative;
+				top: 0;
+				left: 0;
+				transform: none;
+				z-index: 99999;
+				margin: 0 auto;
+			}
+
+			.motta-popup__backdrop {
+				z-index: 9999;
+			}
+
+			.elementor-add-section  {
+				background-color: #fff;
+				margin: 0 !important;
+			}
+		}
+	}
+}
+
+.site-content-container {
+	margin-bottom: 30px;
+}

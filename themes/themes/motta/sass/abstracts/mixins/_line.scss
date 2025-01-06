@@ -1,0 +1,23 @@
+@mixin line($value: 0) {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: $value;
+		left: 0;
+		right: 0;
+		height: 1px;
+		width: 100%;
+		background-color: $color__border-main;
+	}
+}
+
+@mixin line-fullwide() {
+	&::before {
+		width: 100vw;
+		margin-left: calc(-100vw/2 + 100%/2);
+		margin-right: calc(-100vw/2 + 100%/2);
+		height: 4px;
+	}
+}

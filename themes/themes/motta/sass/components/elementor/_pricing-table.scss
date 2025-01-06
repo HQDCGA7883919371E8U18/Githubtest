@@ -1,0 +1,125 @@
+.motta-pricing-table {
+	--motta-pricing-table-color:#1d2128;
+	padding: 45px 30px;
+	color: var(--motta-pricing-table-color);
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	transition: 0.35s;
+}
+
+.motta-pricing-table__header {
+	display: flex;
+	flex-direction: column;
+	order: 1;
+}
+
+.motta-pricing-table__heading {
+	margin: 0 0 10px;
+	order: 2;
+	color: var(--motta-pricing-table-color);
+}
+
+.motta-pricing-table__subheading {
+	order: 3;
+	margin-bottom: 28px;
+	@include font-size(14/16);
+}
+
+.motta-pricing-table__price {
+	margin-bottom: 20px;
+	order: 1;
+	line-height: 1;
+	display: flex;
+	flex-direction: column
+}
+
+.motta-pricing-table--heading-above {
+	.motta-pricing-table__heading {
+		order: 1;
+	}
+
+	.motta-pricing-table__price {
+		order: 2
+	}
+}
+
+.motta-pricing-table__integer-part {
+	@include font-size(54/16);
+	font-weight: 500;
+}
+
+.motta-pricing-table__period {
+	@include font-size(14/16);
+	font-weight: 500;
+	padding-top: 5px;
+}
+
+.motta-pricing-table-period--beside {
+	flex-direction: row;
+	align-items: flex-end;
+
+	.motta-pricing-table__period  {
+		padding-top: 0;
+		padding-bottom: 5px;
+	}
+
+}
+
+.motta-pricing-table__features-list {
+	@include font-size(12/16);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 2.4;
+	order: 3;
+
+	.motta-repeater-item-icon {
+		padding-right: 5px;
+	}
+}
+
+.motta-pricing-table__footer {
+	order: 2;
+	margin-bottom: 23px;
+	width: 100%;
+
+	.motta-button {
+		width: 100%;
+	}
+}
+
+.motta-pricing-table--button-below {
+	.motta-pricing-table__footer {
+		order: 3;
+		margin-top: 23px;
+		margin-bottom: 0;
+	}
+
+	.motta-pricing-table__features-list {
+		order: 2;
+	}
+}
+
+.motta-pricing-table__ribbon {
+	position: absolute;
+	top: -15px;
+	left: 30px;
+	@include font-size(14/16);
+	font-weight: 500;
+	background-color: #ff6e27;
+	color: #fff;
+	padding: 10px;
+	border-radius: 3px;
+	line-height: 1;
+
+	&.motta-ribbon-center {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&.motta-ribbon-right {
+		right: 30px;
+		left: auto;
+	}
+}

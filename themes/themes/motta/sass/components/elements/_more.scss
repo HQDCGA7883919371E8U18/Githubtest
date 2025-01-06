@@ -1,0 +1,20 @@
+.motta-more {
+	.motta-more__content {
+		margin-top: 10px;
+		display: none;
+
+		> * {
+			&:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	.motta-more__button {
+		@include font-size(14/16);
+		color: $color__dark;
+		font-weight: 500;
+		margin-top: 11px;
+	}
+}

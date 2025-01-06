@@ -1,0 +1,25 @@
+:root {
+	--mt-font__main: 'Outfit', Arial, sans-serif;
+
+	--mt-border__radius: 2px;
+
+    --mt-color__primary: #3449ca;
+	--mt-color__primary--dark: #2e3fa3;
+	--mt-color__primary--darker: #29367c;
+	--mt-color__primary--light: #fff;
+	--mt-color__primary--gray: #e6e9f9;
+	--mt-color__primary--grayer: #ced3f2;
+	--mt-color__primary--grayest: #9ea8e6;
+	--mt-color__primary--box-shadow: rgba(52, 73, 202, 0);
+
+	--mt-color__heading: #1d2128;
+
+	--mt-size__medium: 44px;
+
+	--mt-input__box-shadow: rgba(0,0,0,0);
+	--mt-input__background-color: #fff;
+	--mt-input__border-width: 2px;
+	--mt-input__height: 60px;
+	--mt-input__font-size: 14px;
+	--mt-input__font-size-pd: 14px;
+}

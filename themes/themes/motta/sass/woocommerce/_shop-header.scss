@@ -1,0 +1,11 @@
+.shop-header {
+	position: relative;
+	width: 100%;
+	margin-bottom: 25px;
+
+	+ .catalog-top-categories__layout-v2 {
+		.catalog-top-categories__title {
+			margin-top: 15px;
+		}
+	}
+}

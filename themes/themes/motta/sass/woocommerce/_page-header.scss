@@ -1,0 +1,136 @@
+.page-header--products {
+	position: relative;
+	border-radius: 2px;
+	height: 100%;
+	margin-bottom: 15px;
+
+	.page-header__title {
+		position: relative;
+		z-index: 2;
+		@include font-size(36/16);
+		line-height: 32px;
+		font-weight: 700;
+		color: var(--motta-text-color);
+		margin: 0;
+	}
+
+	.page-header__description {
+		position: relative;
+		z-index: 2;
+		margin-top: 13px;
+
+		p {
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.page-header--standard {
+	.page-header__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		z-index: 1;
+	}
+
+	.page-header__image-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		border-radius: 2px;
+	}
+
+	.page-header__content {
+		padding: 0px 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: left;
+	}
+
+	.page-header__description {
+		width: 100%;
+		@include font-size(14/16);
+		line-height: 20px;
+		color: var(--motta-text-color);
+	}
+
+	.site-breadcrumb + .page-header__content {
+		margin: 0;
+	}
+
+}
+
+.page-header--minimal {
+	--motta-text-color: #1d2128;
+	margin-bottom: 22px;
+
+	.site-breadcrumb {
+		+ .page-header__content {
+			margin-top: 7px;
+		}
+	}
+}
+
+.page-header--left {
+	.page-header__content {
+		text-align: left;
+	}
+
+	.page-header__description {
+		width: 100%;
+	}
+}
+
+.page-header--only-breadcrumb {
+	margin-bottom: 0;
+	.page-header__title,
+	.page-header__description {
+		border: 0;
+		clip: rect(1px, 1px, 1px, 1px);
+		clip-path: inset(50%);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute !important;
+		width: 1px;
+		word-wrap: normal !important;
+	}
+
+	.site-breadcrumb + .page-header__content {
+		margin: 0;
+	}
+}
+
+.page-header--text-dark {
+	--motta-text-color: #1d2128;
+}
+
+.page-header--text-light {
+	--motta-text-color: #fff;
+}
+
+.page-header__content {
+	position: relative;
+}
+
+.product-archive-elementor .page-header {
+    border: none;
+    margin: 0;
+    border-radius: 0;
+}

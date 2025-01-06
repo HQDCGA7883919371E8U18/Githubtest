@@ -1,0 +1,141 @@
+.motta-product-tabs__tabs {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 35px 0;
+
+	li {
+		position: relative;
+		margin: 0 27.5px;
+		padding-bottom: 16px;
+		@include font-size(18/16);
+		line-height: 1;
+		font-weight: 500;
+		color: $color__gray;
+		cursor: pointer;
+		transition: .3s;
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 0px;
+			width: 0;
+			border-bottom: 2px solid;
+			transition: width 0.3s;
+		}
+
+		&:hover {
+			color: $color__dark;
+
+			&::after {
+				width: 100%;
+				left: 0;
+			}
+		}
+
+		&.active {
+			color: $color__dark;
+
+			&::after {
+				width: 100%;
+				left: 0;
+			}
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.motta-tabs__panels {
+	position: relative;
+}
+
+.motta-tabs__panel {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: opacity 0.4s;
+
+	ul.products {
+		border-bottom: none !important;
+	}
+
+	&.active {
+		opacity: 1;
+		display: block;
+		visibility: visible;
+		position: static;
+	}
+}
+
+.woocommerce-navigation__products-tabs {
+	text-align: center;
+	margin-top: 39px;
+
+	.nav-links {
+		min-width: auto;
+		background-color: rgba( 6, 177, 143, 0.12 );
+		color: #06b18f;
+	}
+}
+
+.motta-product-tabs__panels-loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $color__background-body;
+	z-index: -1;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+}
+
+.motta-product-tabs__panels {
+
+	&.loading {
+		.motta-product-tabs__panels-loading {
+			opacity: 1;
+			visibility: visible;
+			z-index: 9999;
+		}
+	}
+}
+
+.motta-product-tabs__heading-style--background {
+	.motta-product-tabs__tabs {
+		margin: 0 auto 35px;
+		width: fit-content;
+		background-color: $color__background-gray;
+		padding: 8px;
+		border-radius: 3px;
+
+		li {
+			@include font-size(14/16);
+			color: $color__dark;
+			padding: 16px 47px;
+			border-radius: 3px;
+			margin: 0;
+
+			&:after {
+				display: none;
+			}
+
+			&.active {
+				background-color: $color__light;
+			}
+		}
+	}
+}

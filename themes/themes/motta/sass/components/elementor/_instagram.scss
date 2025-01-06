@@ -1,0 +1,26 @@
+.motta-instagram--elementor {
+	.motta-instagram__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.motta-instagram__item {
+		transition: 0.5s;
+		width: 16.666%;
+		margin: 0;
+
+		&:hover {
+			opacity: 0.9;
+		}
+
+		img {
+			display: block;
+			border-radius: 2px;
+		}
+	}
+}

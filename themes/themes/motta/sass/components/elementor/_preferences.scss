@@ -1,0 +1,49 @@
+.motta-preferences--elementor {
+	display: flex;
+}
+
+.motta-preferences__item {
+	position: relative;
+	padding-right: 21px;
+	margin-right: 19px;
+
+	.motta-button__icon {
+		img {
+			position: relative;
+			top: -2px;
+		}
+
+		+ .motta-button__text {
+			padding-left: 8px;
+		}
+	}
+
+	a {
+		color: inherit;
+
+		&::after {
+			display: none;
+		}
+	}
+
+	&::after {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		display: inline-block;
+		content: '';
+		width: 1px;
+		height: 12px;
+		background-color: $color__border-main;
+	}
+
+	&:last-child {
+		padding-right: 0;
+		margin-right: 0;
+
+		&::after {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,74 @@
+.motta-mobile-navigation-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background-color: #fff;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding: 14px 16px 12px;
+	border-radius: 2px;
+
+	--mt-color__navigation-bar--box-shadow: rgba(0, 0, 0, .16);
+	box-shadow: 0px 0px 16px 0px var( --mt-color__navigation-bar--box-shadow );
+}
+
+.motta-mobile-navigation-bar__icon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include font-size(12/16);
+	font-weight: 500;
+
+	.motta-svg-icon {
+		@include font-size(20/16);
+
+		& + em {
+			margin-top: 5px;
+		}
+	}
+
+	em {
+		font-style: normal;
+	}
+
+	&.cart-icon ,
+	&.wishlist-icon,
+	&.compare-icon {
+		span {
+			position: relative;
+			line-height: 1;
+		}
+
+		.counter {
+			position: absolute;
+			top: -10px;
+			left: 10px;
+			@include font-size(11/16);
+			font-weight: 500;
+			color: #ffffff;
+			text-align: center;
+			line-height: 11px;
+			min-width: 20px;
+			height: 20px;
+			border-radius: 30px;
+			padding: 6px;
+			background-color: #1d2128;
+			display: inline-block;
+		}
+	}
+}
+
+.catalog-toolbar-sticky {
+	.motta-mobile-navigation-bar.standard_adaptive {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.motta-mobile-navigation-bar {
+		display: none;
+	}
+}

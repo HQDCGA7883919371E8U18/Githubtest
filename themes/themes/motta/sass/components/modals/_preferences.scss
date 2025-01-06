@@ -1,0 +1,45 @@
+.modal__preferences {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: $color__background-body;
+	max-width: 448px;
+	width: 100%;
+
+	.modal__header {
+		padding: 20px 23px 0;
+		display: flex;
+		justify-content: space-between
+	}
+
+	.modal__heading {
+		@include font-size(18/16);
+		font-weight: 500;
+		color: $color__dark;
+	}
+
+	.modal__button-close {
+		position: static;
+	}
+
+	.modal__content {
+		padding: 21px 64px 64px;
+	}
+
+	label {
+		display: inline-block;
+		@include font-size(14/16);
+		font-weight: 500;
+		color: $color__gray;
+		margin-bottom: 8px;
+	}
+
+	.update-preferences {
+		width: 100%;
+	}
+
+	.select2-container--open .select2-dropdown--below {
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,51 @@
+.motta-icon-box-widget {
+	margin-top: 24px;
+	padding: 13px 19px 9px;
+	border: 1px solid $color__border-main;
+	border-radius: 2px;
+
+	.motta-icon-box-widget__item {
+		display: flex;
+		align-items: center;
+		color: $color__gray;
+		border-bottom: 1px solid $color__border-main;
+		padding-bottom: 9px;
+		margin-bottom: 11px;
+		position: relative;
+
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	.motta-icon-box-widget__icon {
+		@include font-size(14/16);
+		margin-right: 16px;
+	}
+
+	.motta-icon-box-widget__text {
+		@include font-size(12/16);
+		color: $color__gray;
+		font-weight: 500;
+	}
+
+	a.motta-icon-box-widget__text:hover  {
+		color: $color__dark;
+	}
+
+	.motta-icon-box-widget__button {
+		@include font-size(12/16);
+		color: $color__gray;
+		margin-left: auto;
+
+		&:hover {
+			color: $color__dark;
+		}
+	}
+
+	.motta-icon-box-widget__button_all {
+		display: none;
+	}
+}

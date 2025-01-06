@@ -1,0 +1,45 @@
+//swiper carousel
+.motta-swiper-carousel-elementor {
+	position: relative;
+
+	.motta-swiper-button {
+		text-align: center;
+		opacity: 1;
+		z-index: 99;
+		position: absolute;
+
+		/*rtl:raw:
+			transform: rotateY(180deg);
+		*/
+	}
+
+	.swiper-button-disabled {
+		cursor: auto;
+		background-color: #dadfe3;
+		color: #fff;
+	}
+
+	.elementor-page & {
+		.swiper-container ~ .swiper-pagination-bullets {
+			position: relative;
+		}
+	}
+}
+
+.motta-swiper-carousel-elementor {
+	.swiper-pagination-lock,
+	.swiper-scrollbar-lock,
+	.swiper-button-lock {
+		display: none;
+	}
+}
+
+//swiper pagination carousel
+.swiper-pagination {
+    position: relative;
+    margin-top: 40px;
+}
+
+.elementor-element .swiper .elementor-swiper-button.swiper-button-disabled {
+	cursor: not-allowed;
+}

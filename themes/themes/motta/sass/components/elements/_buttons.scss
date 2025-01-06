@@ -1,0 +1,296 @@
+.motta-button {
+	@include button();
+	.motta-button__icon {
+		@include font-size(20/16);
+		order: 1;
+		line-height: inherit;
+
+		& + .motta-button__text {
+			padding-left: 4px;
+			order: 2;
+		}
+
+		&.motta-align-icon-right {
+			order:3;
+
+			& + .motta-button__text {
+				padding-right: 4px;
+				padding-left: 0;
+			}
+		}
+	}
+
+	&.motta-button--icon-top {
+		display: flex;
+		flex-direction: column;
+		padding: 6px 0 5px;
+
+		.motta-button__icon,
+		.motta-button__text {
+			line-height: 1;
+		}
+
+		.motta-button__icon + .motta-button__text {
+			padding-top: 5px;
+			padding-left: 0;
+		}
+
+		.motta-button__text {
+			@include font-size(12/16);
+		}
+	}
+
+	.motta-button__text_mobile {
+		display: none;
+	}
+}
+
+button {
+	.motta-button__icon {
+		@include font-size(20/16);
+		& + .motta-button__text {
+			padding-left: 6px;
+			transform: translateY(1px);
+		}
+	}
+}
+
+.motta-button--large {
+	@include button-large();
+}
+
+.motta-button--medium {
+	@include button-medium();
+
+	.motta-button__icon {
+		@include font-size(16/16);
+	}
+}
+
+.motta-button--small {
+	@include button-small();
+
+	.motta-button__icon {
+		@include font-size(14/16);
+	}
+}
+
+.motta-button--icon {
+	padding: 0;
+	min-width: 60px;
+
+	&.motta-button--subtle {
+		border: none;
+		padding: 0 1em;
+		min-width: 60px;
+		line-height: 60px;
+	}
+
+	&.motta-button--medium {
+		@include font-size(18/16);
+		padding: 0 0.8em;
+		min-width: var(--mt-size__medium);
+		line-height: var(--mt-size__medium);
+	}
+
+	&.motta-button--small {
+		@include font-size(14/16);
+		padding: 0 0.5em;
+		min-width: 32px;
+		line-height: 32px;
+	}
+
+	&.motta-button--text {
+		min-width: auto;
+		padding: 0;
+
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.motta-button--raised,
+.motta-skin--raised {
+	--mt-color__primary--box-shadow: rgba(52, 73, 202, 0.4);
+}
+
+.motta-button--base,
+.motta-skin--base {
+	--mt-color__primary--box-shadow: rgba(52, 73, 202, 0);
+}
+
+.motta-button--smooth,
+.motta-skin--smooth .motta-custom-button--skin input[type="submit"],
+.motta-skin--smooth .motta-custom-button--skin button.motta-button {
+	--mt-color__primary--box-shadow: rgba(0,0,0,0);
+	background-color: var(--mt-color__primary--gray);
+	color: var(--mt-color__primary);
+
+	&:hover {
+		background-color: var(--mt-color__primary--grayer);
+	}
+
+	&:active,
+	&:focus {
+		background-color: var(--mt-color__primary--grayest);
+	}
+
+}
+
+.motta-button--ghost,
+.motta-skin--ghost .motta-custom-button--skin input[type="submit"],
+.motta-skin--ghost .motta-custom-button--skin button.motta-button {
+	--mt-color__primary--box-shadow: rgba(0,0,0,0);
+	color: var(--mt-color__primary);
+	background-color: rgba(0,0,0,0);
+	border: 2px solid;
+	line-height: 56px;
+
+	&:hover {
+		background-color: var(--mt-color__primary--gray);
+	}
+
+	&:active,
+	&:focus {
+		background-color: var(--mt-color__primary--grayer);
+	}
+
+	&.motta-button--medium {
+		line-height: 40px;
+		height: 40px;
+	}
+
+	&.motta-button--small {
+		line-height: 32px;
+		height: 32px;
+		padding: 0 1.5em;
+	}
+
+	&.motta-button--color-black {
+		background-color: rgba(0,0,0,0);
+	}
+
+}
+
+.motta-button--subtle,
+.motta-skin--subtle .motta-custom-button--skin input[type="submit"],
+.motta-skin--subtle .motta-custom-button--skin button.motta-button {
+	--mt-color__primary--box-shadow: rgba(0,0,0,0);
+	color: var(--mt-color__primary);
+	background-color: transparent;
+	border-radius: 0;
+	border-bottom: 1px solid;
+	padding: 0;
+	min-width: auto;
+	line-height: 1.3;
+
+
+	&:hover {
+		background-color: transparent;
+	}
+
+	&:active,
+	&:focus {
+		background-color: transparent;
+	}
+
+	&.disabled,
+	&:disabled,
+	&:disabled[disabled] {
+		background-color: transparent;
+		color: #dadfe3;
+		border-bottom: 1px solid;
+
+		&:hover{
+			background-color: transparent
+		}
+	}
+}
+
+.motta-button--text,
+.motta-skin--text .motta-custom-button--skin input[type="submit"],
+.motta-skin--text .motta-custom-button--skin button.motta-button {
+	--mt-color__primary--box-shadow: rgba(0,0,0,0);
+	color: var(--mt-color__primary);
+	background-color: transparent;
+	padding: 0;
+	border-radius: 0;
+	min-width: auto;
+	position: relative;
+	line-height: 1;
+
+	&:after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: -4px;
+		width: 0;
+		border-bottom: 1px solid;
+		transition: width 0.3s;
+	}
+
+	&:hover {
+		background-color: transparent;
+
+		&:after {
+			width: 100%;
+			left: 0;
+		}
+	}
+
+	&:active,
+	&:focus {
+		background-color: transparent;
+	}
+
+}
+
+.motta-skin--subtle .motta-custom-button--skin input[type="submit"],
+.motta-skin--subtle .motta-custom-button--skin button.motta-button,
+.motta-skin--text .motta-custom-button--skin input[type="submit"],
+.motta-skin--text .motta-custom-button--skin button.motta-button {
+	color: $color__dark;
+	border-color: #dadfe3;
+
+	&:hover {
+		border-color: $color__dark;
+	}
+}
+
+.motta-button--bg-color-black {
+	--mt-color__primary--box-shadow: rgba(29, 33, 40, 0.4);
+	background-color: $color__dark;
+	color: $color__light;
+
+	&:hover {
+		background-color: $color__dark;
+	}
+
+	&:active,
+	&:focus {
+		background-color: $color__dark !important;
+		color: $color__light !important;
+	}
+}
+
+.motta-button--bg-color-white {
+	--mt-color__primary--box-shadow: rgba(0, 0, 0, 0.16);
+	background-color: $color__light;
+	color: $color__dark;
+
+	&:hover {
+		background-color: transparent;
+	}
+
+	&:active,
+	&:focus {
+		background-color: transparent;
+	}
+}
+
+.motta-button--color-black {
+	color: $color__dark;
+}
+
+.mejs-button > button { min-width: auto;}

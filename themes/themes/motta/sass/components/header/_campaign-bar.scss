@@ -1,0 +1,50 @@
+.campaign-bar {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.campaign-bar__container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	min-height: 44px;
+	@include scrollbar();
+}
+
+.campaign-bar__item {
+	--mt-campaign-bar-size: 14px;
+	font-size: var(--mt-campaign-bar-size);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	--mt-color__primary: #4d3f2f;
+	white-space: nowrap;
+
+	&.text-light {
+		--mt-color__primary: #ffffff;
+	}
+}
+
+.campaign-bar__icon {
+	display: inline-block;
+	line-height: 1;
+	margin-right: 11px;
+	color: var(--mt-color__primary);
+
+	svg {
+		fill: currentColor;
+	}
+}
+
+.campaign-bar__text {
+	color: var(--mt-color__primary);
+	font-weight: inherit;
+}
+
+.campaign-bar__button {
+	margin-left: 31px;
+	font-size: inherit;
+}

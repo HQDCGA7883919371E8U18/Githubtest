@@ -1,0 +1,83 @@
+.error404 .site-header:after {
+	display: none;
+}
+
+.error404 .site-content {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.error-404__v1{
+	max-width: 420px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	margin-bottom: 90px;
+	margin-top: 110px;
+}
+
+.error-404__title{
+	margin: 30px 0 15px;
+}
+
+.error-404__content{
+	font-weight: 500;
+}
+
+.error-404__icon{
+	@include font-size(257/16);
+}
+
+.error-404__button{
+	&.motta-button{
+		margin-top: 42px;
+		min-width: 180px;
+		--mt-color__primary: #1d2128;
+		box-shadow: none;
+	}
+}
+
+.error-404__v2{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 170px;
+	margin-bottom: 130px;
+
+	.error-404__title{
+		@include font-size(128/16);
+		font-weight: 500;
+		margin: 0;
+	}
+
+	.error-404__content{
+		@include font-size(24/16);
+		margin-top: 18px;
+		line-height: 32px;
+		font-weight: 400;
+
+		h3{
+			@include font-size(54/16);
+			font-weight: 500;
+			margin: 0 0 29px;
+			white-space: nowrap;
+		}
+	}
+
+	.error-404__button{
+		margin-top: 39px;
+	}
+}
+
+.error-404__image{
+	order: 2;
+	max-width: 556px;
+	height: auto;
+	margin-left: 50px;
+}
+
+.error-404__wrapper{
+	max-width: 500px;
+	padding-bottom: 23px;
+	text-align: left;
+}

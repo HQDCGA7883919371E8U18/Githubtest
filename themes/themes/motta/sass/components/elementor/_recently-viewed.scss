@@ -1,0 +1,78 @@
+.motta-products-recently-viewed-carousel,
+.motta-products-recently-viewed-grid {
+    .no-products {
+        text-align: center;
+    }
+
+    .hide-empty {
+        display: none;
+    }
+
+    .motta-swiper-button {
+		top: 50%;
+		transform: translateY(-50%);
+
+		/*rtl:raw:
+			transform: translateY(-50%) rotateY(180deg);
+		*/
+	}
+
+	.motta-swiper-button-prev {
+		left: -22px;
+	}
+
+	.motta-swiper-button-next {
+		right: -22px;
+	}
+
+	.deal-progress {
+		width: 100%;
+		padding: 9px 0;
+
+		.progress-bar {
+			height: 4px;
+			border-radius: 2px;
+			position: relative;
+			background-color: #e4e4e4;
+			margin-bottom: 5px;
+		}
+
+		.progress-value {
+			height: 4px;
+			background-color: $color__dark;
+			border-radius: 2px;
+		}
+
+		.deal-text {
+			@include font-size(11/16);
+			font-weight: 500;
+			color: $color__gray;
+		}
+	}
+
+	.product-card-layout-2{
+		.deal-progress {
+			padding-left: 9px;
+			padding-right: 9px;
+		}
+	}
+
+	.product-card-layout-4 {
+		.deal-progress {
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+	}
+}
+
+.motta-products-recently-viewed__heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 21px;
+}
+
+.motta-products-recently-viewed__title {
+	@include font-size(28/16);
+	font-weight: 500;
+}

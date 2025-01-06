@@ -1,0 +1,107 @@
+.account-panel {
+	.panel__header {
+		display: flex;
+		align-items: center;
+		padding: 32px 32px 0;
+	}
+}
+
+.account-panel__avatar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	background-color: $color__dark;
+	border-radius: 100%;
+	margin-right: 16px;
+
+	img {
+		border-radius: 100%;
+	}
+
+	span {
+		font-size: inherit;
+		color: $color__light-gray;
+	}
+
+	&.logged {
+		background-color: transparent;
+	}
+}
+
+.account-panel__name {
+	text-transform: capitalize;
+}
+
+.account-panel__links {
+	list-style: none;
+	padding: 20px 0;
+	margin: 0;
+}
+
+.account-panel__link {
+	a {
+		@include font-size(14/16);
+		width: 100%;
+		color: $color__dark;
+		padding: 15px 33px;
+		position: relative;
+		justify-content: left;
+		line-height: 1;
+		display: inline-flex;
+		font-weight: 500;
+
+		&:after {
+			display: none;
+		}
+
+		&:hover {
+			background-color: #ecf0f4;
+		}
+
+		.motta-button__icon,
+		.menu-item-icon {
+			@include font-size(20/16);
+			min-width: 49px;
+		}
+
+		.header-counter {
+			top: 3px;
+			left: 44px;
+			background-color: $color__dark;
+			color: #fff;
+		}
+	}
+
+	.account-panel__icon {
+		min-width: 49px;
+		position: relative;
+		@include font-size(18/16);
+
+		.counter {
+			position: absolute;
+			top: -7px;
+			left: 17px;
+			@include font-size(11/16);
+			color: #ffffff;
+			background-color: $color__dark;
+			border-radius: 100%;
+			text-align: center;
+			min-width: 20px;
+			height: 20px;
+			line-height: 24px;
+		}
+	}
+
+	.account-panel__label {
+		@include font-size(14/16);
+		font-weight: 500;
+		margin-top: 2px;
+	}
+
+	ul.menu {
+		padding: 0;
+		margin: 0;
+	}
+}

@@ -1,0 +1,309 @@
+.motta-banner {
+    position: relative;
+    overflow: hidden;
+
+    .motta-countdown {
+        min-width: 13px;
+        width: fit-content;
+        padding: 5px 5px 4px 8px;
+        margin-left: -5px;
+        margin-right: -5px;
+        border-radius: 30px;
+        background-color: #1d2128;
+
+        .timer{
+            padding: 0 5px;
+            color: $color__light;
+        }
+
+        .divider{
+            display: block;
+            @include font-size(12/16);
+            top: 1px;
+            right: -2px;
+            /*rtl:raw:
+                right: -2px;
+                left: auto;
+            */
+        }
+
+        .text{
+            display: none;
+        }
+
+        .digits{
+            margin-bottom: 0;
+            @include font-size(11/16);
+            font-weight: 500;
+        }
+    }
+}
+
+.motta-banner__image-zoom {
+    .motta-banner {
+        &:hover{
+            .motta-banner__featured-image{
+                transform: scale(1.1);
+                transition: var( --motta-banner__duration-time );
+            }
+        }
+    }
+}
+
+.motta-banner__zoom-fade {
+    .motta-banner {
+        &:hover{
+            .motta-banner__featured-image{
+                transform: scale(1.1);
+
+                &:before {
+                    background-color: rgba(0,0,0,0.2);
+                }
+            }
+        }
+
+        .motta-banner__featured-image {
+            &:before {
+                content: "";
+                background-color: rgba(0,0,0,0);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                left: 0;
+                right: 0;
+                transition: var( --motta-banner__duration-time );
+            }
+        }
+    }
+}
+
+.motta-banner__fade-in {
+    .motta-banner {
+        &:hover{
+            .motta-banner__featured-image:before {
+                background-color: rgba(0,0,0,0);
+            }
+        }
+
+        .motta-banner__featured-image {
+            &:before {
+                content: "";
+                background-color: rgba(0,0,0,.16);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                left: 0;
+                right: 0;
+                transition: var( --motta-banner__duration-time );
+            }
+        }
+    }
+}
+
+.motta-banner__fade-out {
+    .motta-banner {
+        &:hover{
+            .motta-banner__featured-image:before {
+                background-color: rgba(0,0,0,0.16);
+            }
+        }
+
+        .motta-banner__featured-image {
+            &:before {
+                content: "";
+                background-color: rgba(0,0,0,0);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                left: 0;
+                right: 0;
+                transition: var( --motta-banner__duration-time );
+            }
+        }
+    }
+}
+
+.motta-banner__blur {
+    .motta-banner {
+        &:hover{
+            .motta-banner__featured-image{
+                -webkit-animation-name: mottaBlur;
+                -moz-animation-name: mottaBlur;
+                animation-name: mottaBlur;
+                -webkit-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+.motta-banner__overlay {
+    .motta-banner {
+        .motta-banner__featured-image {
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,.2);
+                transition: var( --motta-banner__duration-time );
+                opacity: 0;
+            }
+        }
+
+        &:hover {
+            .motta-banner__featured-image {
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.motta-banner__countdown {
+    --mt-input__box-shadow: transparent;
+
+    display: inline-flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 6px 0px var(--mt-input__box-shadow);
+    margin-bottom: 20px
+}
+
+.motta-banner__countdown-text {
+    @include font-size(11/16);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.motta-banner__countdown--row {
+    .motta-banner__countdown {
+        align-items: center;
+    }
+
+    .motta-banner__countdown-text {
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+}
+
+.motta-banner__featured-image {
+    --motta-banner__duration-time: .3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: var( --motta-banner__duration-time );
+    animation-duration: var( --motta-banner__duration-time );
+}
+
+.motta-banner__wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    margin: auto;
+    padding: 26px 32px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &.countdown__position--after {
+        .motta-banner__content {
+            order: 1;
+        }
+
+        .motta-banner__countdown {
+            order: 2;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.motta-banner__before-title {
+    @include font-size(28/16);
+    margin-bottom: 10px;
+}
+
+.motta-banner__title{
+    @include font-size(28/16);
+    line-height: 32px;
+    margin: 0 0 14px;
+}
+
+.motta-banner__title--icon {
+    line-height: 1;
+}
+
+.motta-banner__description{
+    @include font-size(14/16);
+    margin: 0 0 3px;
+
+   .motta-banner & a {
+        color: inherit;
+        text-decoration: underline;
+    }
+}
+
+.motta-banner__button-2{
+    margin-left: 30px;
+}
+
+.motta-banner__sale{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #1d2128;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 600;
+    @include font-size(11/16);
+}
+
+.motta-banner__sale--text{
+    margin-bottom: 2px;
+    line-height: 1;
+}
+
+.elementor-widget:not(:last-child).elementor-widget-motta-banner{
+    margin-bottom: 0;
+}
+
+.motta--time-text-enable-yes {
+    .motta-banner {
+        .motta-countdown {
+            box-shadow: 0px 2px 6px 0px var(--mt-input__box-shadow);
+            .timer {
+                position: relative;
+                text-align: center;
+            }
+
+            .text {
+                position: absolute;
+                display: inline;
+                text-align: center;
+                top: calc(100% + 17px);
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+.motta-banner__arrow {
+    @include font-size(21/16);
+}
